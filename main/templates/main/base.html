@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Обязательные мета-теги -->
+    <meta charset="utf-8">
+
+    <title>{% block title %}TMT Consulting Group{% endblock %}</title>
+    {% block meta %}{% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{% static 'main/img/favicon.ico' %}" type="image/x-icon">
+    <!-- Bootstrap, иконки и шрифт -->  
+    <link href="{% static 'main/css/hamburger.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/container.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/reset.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/aos.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	{% block extracss %}{% endblock %}
+
+    
+</head>
+<body>
+    <div class="header__placeholder"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="{% url "home" %}" class='logo'><img src="{% static 'main/img/logo.png' %}" alt="logo"></a>   
+
+                <ul class="nav">
+                    <li class="nav__item"><a href="{% url 'home' %}">Home </a></li>
+                    <li class="nav__item"><a href="{% url "blog" %}">Blog</a></li>
+                    <li class="nav__item"><a href="{% url 'news_list' %}">News</a></li>
+                    <li>|</li>
+                    <li class="nav__item nav__about"><a href="{% url "about" %}">About Us </a></li>
+                    <li class="nav__item"><a href="{% url "contact" %}">Contacts</a></li>
+
+                    {% comment %} <li class="nav__item">
+                        <ul class="nav__language">
+                            <li class="language__item"><a href="">Русский</a></li>
+                            <li class="language__item"><a href="">English</a></li>
+                            <li class="language__item"><a href="">Turkmence</a></li>
+                        </ul>
+                    </li> {% endcomment %}
+                </ul>
+                <div class="nav__mobile">
+                    <button class="hamburger hamburger--elastic " type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+	
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__left">
+                    <a href="{% url "home" %}" class='logo logo_footer'><img src="{% static 'main/img/logo.png' %}" alt="logo"></a> 
+                </div>
+                <div class="footer__middle">
+                    <ul class="nav nav_footer">
+                        <li class="nav__item nav__item_footer"><a href="{% url "home" %}">Home </a></li>
+                        <li class="nav__item nav__item_footer"><a href="{% url "about" %}">About Us </a></li>
+                        <li class="nav__item nav__item_footer"><a href="{% url "blog" %}">Blog</a></li>
+                        <li class="nav__item nav__item_footer"><a href="{% url "contact" %}">Contacts</a></li>
+                        {% comment %} <li class="nav__item">
+                            <ul class="nav__language">
+                                <li class="language__item"><a href="">Русский</a></li>
+                                <li class="language__item"><a href="">English</a></li>
+                                <li class="language__item"><a href="">Turkmence</a></li>
+                            </ul>
+                        </li> {% endcomment %}
+                    </ul>
+                </div>
+                <div class="footer__right">
+                    <div class="sub__title">Join our community</div>
+                    {% include "main/subscriber.html" %}
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="footer__bottom">
+                <div class="rights">All rights reserved</div>
+                <div class="media">
+                    <a href="https://www.facebook.com/profile.php?id=61572642102689&locale=ru_RU" class="media__item"><img src="{% static 'main/img/fb.svg' %}" alt="facebook"></a>
+                    <a href="https://www.linkedin.com/company/tmt-consulting-group" class="media__item"><img src="{% static 'main/img/lin.svg' %}" alt="linkedin"></a>
+                    <a href="https://www.instagram.com/tmt_consulting_group/" class="media__item"><img src="{% static 'main/img/inst.svg' %}" alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Дополнительные скрипты JavaScript -->
+    <script src="{% static 'main/js/aos.js' %}"></script>
+    <script src="{% static 'main/js/base.js' %}"></script>
+	{% block extrajs %}{% endblock %}
+</body>
+</html>

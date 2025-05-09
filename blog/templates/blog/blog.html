@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+
+
+{% block title %}Blog | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="Blog about conferences and forums">
+{% endblock %}
+
+{% load static %}
+
+{% load custom_filters %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}">
+{% endblock extracss %}
+
+{% block content %}
+<section class="blog">
+	<div class="container">
+		<div class="blog__wrapper">
+			<h1 class="blog__headTitle title"  data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom">Blog</h1>
+			<div class="blog__list">
+				{% for item in blog %}
+				<a class="blog__item" href="{% url "blog_detail" item.slug %}" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom" >
+					<picture class="blog__img">
+						<img src="{{ item.image.url }}" alt="blog">
+					</picture>
+					<div class="blog__content">
+						<div class="blog__date">{{ item.created_at|date }}</div>
+						<div class="blog__bottom">
+							<h3 class="blog__title">{{ item.title|slice:":130" }}</h3>
+							<div class="blog__descr">{{ item.text|slice:":110"|safe }}</div>
+						</div>
+					</div>
+				</a>
+				{% endfor %}
+				
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock  %}

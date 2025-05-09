@@ -1,0 +1,80 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% load custom_filters %}
+
+
+{% block title %}About us | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level.">
+{% endblock %}
+
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'about/css/about.css' %}">
+{% endblock extracss %}
+
+
+{% block content %}
+<section class="about">
+	<div class="container">
+		<div class="about__wrapper">
+			<div class="about__nav">
+				<a class="about__navProject about__navActive" href="" data-aos='fade-down' data-aos-duration="500" data-aos-anchor-placement="top-center">Projects</a>
+				<div class="about__sep" data-aos='zoom-in' data-aos-duration="500" data-aos-anchor-placement="top-center"></div>
+				<a class="about__navServices" href="" data-aos='fade-down' data-aos-duration="500" data-aos-anchor-placement="top-center">Services</a>
+			</div>
+			<div class="projects active">
+				{% for item in project %}
+				<div class="projects__item" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">
+					<div class="projects__img">
+						<img src="{{ item.image.url }}" alt="{{ item.title }}">
+					</div>
+					<div class="projects__content">
+						<h3 class="projects__title">{{ item.title }}</h3>
+						<div class="projects__descr">{{ item.descr|safe }}</div>
+						<div class="projects__links">
+							<a class="projects__gallery" href='{% url "gallery" item.pk%}'>
+								<button>Gallery</button>
+							</a>
+							<a href="{{ item.pdf.url }}" download class="projects__file">
+								<button>Download report</button>
+							</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="services">
+				{% for item in services %}
+				<div class="services__item" >
+					<div class="services__itemWrapper">
+						<img src="{{ item.image.url }}" alt="service">
+						<h2 class="services__title">{{ item.title }}</h2>
+						{% comment %} <div class="services__text">{{ item.text|first_paragraph|safe }}</div>	 {% endcomment %}
+					</div>
+					
+
+					<div class="services__popup">
+						<div class="services__popupWrapper">
+							<div class="services__popupClose">&times;</div>
+							<div class="services__popupTitle">{{ item.title }}</div>
+							<div class="services__popupText">{{ item.text|safe }}</div>
+							<a href="{% url "contact" %}"><button class="services__popupBtn">Contact us</button></a>
+						</div>
+						
+					</div>
+				</div>
+				
+				{% endfor %}
+			</div>	
+		</div>
+	</div>
+</section>
+{% endblock content %}
+
+{% block extrajs %}
+<script src="{% static 'about/js/about.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,19 @@
+<form method="post" action="{% url 'subscribe' %}" class="sub__form">
+    {% csrf_token %}
+    <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your Email" 
+        required
+        class="sub__email"
+    >
+    <button type="submit" class="sub__button">GO</button>
+</form>
+
+<div class="footer__messages">
+    <div class="messages__wrapper">
+        <div class="footer__exit">&times;</div>
+        <div class="message__text">Thank You!</div>
+    </div>
+</div>
+

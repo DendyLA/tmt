@@ -1,0 +1,138 @@
+/* Reset styles similar to Bootstrap's reboot */
+:root {
+	--font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  
+  *,
+  *::before,
+  *::after {
+	box-sizing: border-box; /* Bootstrap uses border-box globally */
+  }
+  
+  html {
+	line-height: 1.15; /* Correct the line height in all browsers */
+	-webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  }
+  
+  body {
+	margin: 0;
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Remove default margin on common elements */
+  p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+  }
+  
+  /* Links */
+  a {
+	color: #0d6efd;
+	text-decoration: none;
+	background-color: transparent;
+  }
+  a:hover {
+	color: #0a58ca;
+	text-decoration: underline;
+  }
+  
+  /* Lists */
+  ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  /* Forms */
+  button, input, optgroup, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+  }
+  button, input {
+	overflow: visible;
+  }
+  button, select {
+	text-transform: none;
+  }
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+  }
+  textarea {
+	overflow: auto;
+	resize: vertical;
+  }
+  
+  /* Tables */
+  table {
+	border-collapse: collapse;
+  }
+  
+  /* Media elements */
+  img, svg, video, canvas, audio, iframe, embed, object {
+	display: block;
+	max-width: 100%;
+  }
+  img, video {
+	height: auto;
+  }
+  
+  /* Misc */
+  hr {
+	margin: 1rem 0;
+	color: inherit;
+	background-color: currentColor;
+	border: 0;
+	opacity: 0.25;
+  }
+  pre, code, kbd, samp {
+	font-family: var(--font-monospace);
+  }
+
+  /* Полный сброс стилей для ссылок */
+a {
+  color: inherit;                /* Наследует цвет текста от родителя */
+  text-decoration: none;         /* Убирает подчёркивание */
+  background-color: transparent; /* Убирает фоновые эффекты */
+  cursor: pointer;               /* Курсор-указатель для всех ссылок */
+  transition: color 0.15s ease-in-out; /* Плавное изменение цвета (опционально) */
+}
+
+/* Состояния ссылок */
+a:hover {
+  color: inherit;                /* Можно задать свой цвет для hover */
+  text-decoration: none;    /* Добавить подчёркивание при наведении (опционально) */
+}
+
+a:active,
+a:focus {
+  outline: none;                 /* Убирает контур при фокусе (не рекомендуется для accessibility) */
+  text-decoration: none;         /* Отключение подчёркивания при активном состоянии */
+}
+
+/* Для кнопко-подобных ссылок */
+a.button-style {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+}

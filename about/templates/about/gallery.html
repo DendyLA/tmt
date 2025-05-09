@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+
+
+{% load custom_filters %}
+
+
+{% block title %}Gallery | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level.">
+{% endblock %}
+
+
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'about/css/gallery.css' %}">
+{% endblock extracss %}
+
+{% block content %}
+<section class="gallery">
+	<div class="container">
+		<h1 class="title">Gallery</h1>
+		<div class="gallery__wrapper">
+				{% for item in image %}
+				<div class="gallery__item">
+					<img src="{{ item.image.url }}" alt="{{ item.caption }}">
+				</div>
+				{% endfor %}
+		</div>
+	</div>
+</section>
+{% endblock content %}

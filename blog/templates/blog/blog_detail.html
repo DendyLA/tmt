@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+
+{% load custom_filters %}
+
+{% block title %}{{ blog.title }} | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ blog.text|prepare_meta }}">
+{% endblock %}
+
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog_detail.css' %}">
+{% endblock extracss %}
+
+{% block content %}
+<section class="blog">
+	<div class="container">
+		<div class="blog__wrapper">
+			<h1 class="blog__headTitle">{{ blog.title }}</h1>
+			<div class="blog__date">{{ blog.created_at|date }}</div>
+			<div class="blog__content">
+				<div class="blog__text">{{ blog.text|safe }}</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

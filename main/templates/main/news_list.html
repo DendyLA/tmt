@@ -1,0 +1,65 @@
+{% extends "main/base.html" %}
+
+
+{% load custom_filters %}
+
+{% block title %}News | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="TMT Consulting Group News">
+{% endblock %}
+
+
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/news_list.css' %}">
+{% endblock extracss %}
+
+{% block content %}
+
+{% load custom_filters %}
+
+<section class="news">
+	<div class="container">
+		<h3 class="news__headTitle title" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">News</h3>
+		<div class="news__wrapper">
+			{% for item in page_obj %}
+			<a href="{% url 'news_detail' item.slug %}" class="news__link" data-aos='fade-up' data-aos-duration="500" data-aos-anchor-placement="top-center">
+				<div class="news__item">
+					<div class="news__top">
+						<img src="{{ item.image.url }}" alt="{{ item.title }}" class="news__img">
+					</div>
+					<div class="news__bottom">
+						<h2 class="news__title">{{ item.title|trim_title:"30,3"|linebreaksbr }}</h2>
+						<div class="news__date">{{ item.pub_date|date:"d.m.Y" }}</div>
+						<div class="news__more">Read more...</div > 
+					</div>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+		<div class="news__paginator">
+			{% if page_obj.has_previous %}
+			<a href="?page={{ page_obj.previous_page_number }}">
+				<svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000"/>
+				</svg>
+			</a>
+			{% endif %}
+		  
+			{% comment %} <span> {{ page_obj.number }} ... {{ page_obj.paginator.num_pages }}</span> {% endcomment %}
+		  
+			{% if page_obj.has_next %}
+			<a href="?page={{ page_obj.next_page_number }}">
+				<svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<g transform="scale(-1,1) translate(-1024,0)">
+						<path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000"/>
+					</g>
+			  	</svg>
+			</a>
+			{% endif %}
+		  </div>
+	</div>
+</section>
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends "main/base.html" %}
+
+{% load custom_filters %}
+
+{% block title %}{{ news.title }} | TMT Consulting Group{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ news.content|prepare_meta }}">
+{% endblock %}
+
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/news_detail.css' %}">
+{% endblock extracss %}
+
+{% block content %}
+<section class="news" >
+	<div class="container">
+		<a href="{% url 'news_list' %}" class="news__link"  data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+			<button>Back to News</button >
+		</a>
+		<div class="news__wrapper" >
+			<div class="news__main"  data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+				<div class="news__img">
+					<img src="{{ news.image.url }}" alt="{{ news.title }}" >
+				</div>
+				<div class="news__bottom">
+					<h1 class="news__title">{{ news.title }}</h1>
+					<div class="news__date">{{ news.pub_date|date:'d.m.y' }}</div>
+					<p class="news__content">{{ news.content|safe }}</p>
+				</div>
+				
+			</div>
+
+			{% load custom_filters %}
+
+			<div class="news__latest"  data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
+				<div class="latest">
+					<div class="latest__headTitle">Latest News</div>
+					<div class="latest__content">
+						{% for item in latest_news %}
+						<a href="{% url 'news_detail' item.slug %}" class="latest__item">
+							<div class="latest__img">
+								<img src='{{ item.image.url }}'></img>
+							</div>
+							<h2 class="latest__title">{{ item.title|trim_title:"45,1"|linebreaksbr }}</h2>
+						</a>
+						{% endfor %}
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+{% endblock  %}
