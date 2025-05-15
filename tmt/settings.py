@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5um4&y(r(e^pz%=m2!%wexmn2mvav@acr-e18zn5jgzu6h(7bv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tmt.tm', 'www.tmt.tm']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,8 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 # Default primary key field type
@@ -135,7 +134,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 MEDIA_URL = '/media/'  # URL-префикс для медиафайлов
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Путь к папке с файлами
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Путь к папке с файлами
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE =False

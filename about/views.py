@@ -10,8 +10,7 @@ def about(request):
 
 
 def gallery(request, pk):
-	gallery = get_object_or_404(ProjectImage, pk=pk) 
-	item = gallery.project
-	image = item.images.all()
+	project = get_object_or_404(Project, pk=pk) 
+	image = project.images.all()
 
 	return render(request, 'about/gallery.html', { 'image' : image })

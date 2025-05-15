@@ -39,9 +39,13 @@
 							<a class="projects__gallery" href='{% url "gallery" item.pk%}'>
 								<button>Gallery</button>
 							</a>
-							<a href="{{ item.pdf.url }}" download class="projects__file">
-								<button>Download report</button>
-							</a>
+							{% if item.pdf and item.pdf.name %}
+								<a href="{{ item.pdf.url }}" download class="projects__file">
+									<button>Download report</button>
+								</a>
+							{% else %}
+								
+							{% endif %}
 						</div>
 					</div>
 				</div>
