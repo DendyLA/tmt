@@ -1,11 +1,12 @@
 {% extends "main/base.html" %}
 
+{% load i18n %}
 {% load custom_filters %}
 
-{% block title %}Contacts | TMT Consulting Group{% endblock %}
+{% block title %}{% trans 'Contacts' %} | {% trans 'TMT Consulting Group' %}{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="Asghabat, Turkmenistan">
+    <meta name="description" content="{% trans 'Asghabat, Turkmenistan' %}">
 {% endblock %}
 
 {% load static %}
@@ -19,7 +20,7 @@
 {% block content %}
 <section class="contacts">
 	<div class="container">
-		<h1>Contact us</h1>
+		<h1>{% trans 'Contacts' %}</h1>
 		<div class="contacts__wrapper">
 			<div class="contacts__info">
 				<div class="contacts__phones">
@@ -50,26 +51,26 @@
 				
 				<div class="form__wrapper">
 					<div class="form-group">
-						<label for="id_first_name">Name <span>*</span></label>
+						<label for="id_first_name">{% trans 'Name' %} <span>*</span></label>
 						<input placeholder='Name' type="text" name="first_name" id="id_first_name" value="{{ form.first_name.value|default:'' }}" required>
 						{{ form.first_name.errors }}
 					</div>
 		
 					<div class="form-group">
-						<label for="id_last_name">Surname <span>*</span></label>
+						<label for="id_last_name">{% trans 'Surname' %} <span>*</span></label>
 						<input placeholder='Surname' type="text" name="last_name" id="id_last_name" value="{{ form.last_name.value|default:'' }}" required>
 						{{ form.last_name.errors }}
 					</div>
 				</div>
 				<div class="form__wrapper">
 					<div class="form-group">
-						<label for="id_phone">Phone </label>
+						<label for="id_phone"> {% trans 'Phone' %}</label>
 						<input placeholder='12345678' type="tel"  id="id_phone_display" value="{{ form.phone.value|default:'' }}">
 						<input type="hidden" name="phone" id="id_phone">
 					</div>
 		
 					<div class="form-group">
-						<label for="id_email">Email <span>*</span></label>
+						<label for="id_email">{% trans 'Email' %} <span>*</span></label>
 						<input placeholder='Email' type="email" name="email" id="id_email" value="{{ form.email.value|default:'' }}" required>
 						{{ form.email.errors }}
 					</div>
@@ -78,17 +79,17 @@
 				
 	
 				<div class="form-group form-group-message">
-					<label for="id_message">Message <span>*</span></label>
+					<label for="id_message">{% trans 'Message' %} <span>*</span></label>
 					<textarea placeholder='Message' name="message" id="id_message" required>{{ form.message.value|default:'' }}</textarea>
 					{{ form.message.errors }}
 				</div>
 	
-				<button type="submit" class="form__btn">Submit</button>
+				<button type="submit" class="form__btn">{% trans 'Submit' %}</button>
 
 				<div class="form__popup">
 					<div class="form__popupWrapper">
 						<div class="form__popupClose">&times;</div>
-						<div class="form__popupText">Thank You for your message!</div>
+						<div class="form__popupText">{% trans 'Thank You for your message!' %}</div>
 					</div>
 				</div>
 			</form>

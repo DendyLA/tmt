@@ -1,50 +1,68 @@
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
+from django.utils.translation import override
 
 from about.models import ProjectImage
 from blog.models import Blog
 from main.models import News
 
+LANGUAGES = ['en', 'ru', 'tk']
 
-class StaticViewSitemap(Sitemap):
+class StaticViewI18nSitemap(Sitemap):
     priority = 1.0
     changefreq = "weekly"
 
+    def __init__(self, lang):
+        self.lang = lang
+
     def items(self):
-        return ['home', 'about', 'contact', 'news_list', 'blog']  # названия в urls.py
+        return ['home', 'about', 'contact', 'news_list', 'blog']
 
     def location(self, item):
-        return reverse(item)
+        with override(self.lang):
+            return reverse(item)
 
 
-class ProjectImageSitemap(Sitemap):
+class ProjectImageI18nSitemap(Sitemap):
     changefreq = "monthly"
     priority = 0.5
+
+    def __init__(self, lang):
+        self.lang = lang
 
     def items(self):
         return ProjectImage.objects.all()
 
     def location(self, obj):
-        return reverse('gallery', args=[obj.pk])  # Только у изображений есть detail-страницы
+        with override(self.lang):
+            return reverse("gallery", args=[obj.pk])
 
 
-class BlogSitemap(Sitemap):
+class BlogI18nSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.6
+
+    def __init__(self, lang):
+        self.lang = lang
 
     def items(self):
         return Blog.objects.all()
 
     def location(self, obj):
-        return reverse('blog_detail', args=[obj.pk])  # Вьюха принимает pk
+        with override(self.lang):
+            return reverse("blog_detail", args=[obj.slug])
 
 
-class NewsSitemap(Sitemap):
+class NewsI18nSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.6
+
+    def __init__(self, lang):
+        self.lang = lang
 
     def items(self):
         return News.objects.all()
 
     def location(self, obj):
-        return reverse('news_detail', args=[obj.pk])
+        with override(self.lang):
+            return reverse("news_detail", args=[obj.slug])

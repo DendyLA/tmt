@@ -13,6 +13,37 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('tk', _('Turkmen')),
+)
+
+PARLER_LANGUAGES = {
+    1: (  # ID сайта (SITE_ID)
+        {'code': 'en'},
+        {'code': 'ru'},
+        {'code': 'tk'},
+    ),
+    'default': {
+        'fallback': 'en',  # язык по умолчанию
+        'hide_untranslated': False,  # показывать даже без перевода
+    }
+}
+
+LANGUAGE_CODE = 'en'
+
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+
+
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +57,7 @@ SECRET_KEY = 'django-insecure-5um4&y(r(e^pz%=m2!%wexmn2mvav@acr-e18zn5jgzu6h(7bv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ ]
 
 
 # Application definition
@@ -39,9 +70,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django.contrib.sitemaps',
 	'ckeditor',
 	'ckeditor_uploader',
+	'parler',
 	'imagekit',
 	'main',
 	'blog',
@@ -53,11 +86,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+	'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	
 ]
 
 ROOT_URLCONF = 'tmt.urls'
@@ -72,6 +107,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+				'django.template.context_processors.i18n',
+
             ],
         },
     },
@@ -139,6 +176,13 @@ MEDIA_URL = '/media/'  # URL-префикс для медиафайлов
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Путь к папке с файлами
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
+SITE_ID = 1
 
 
 SECURE_SSL_REDIRECT = False

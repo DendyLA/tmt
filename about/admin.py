@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from parler.admin import TranslatableAdmin
 
 from .models import Project, ProjectImage, AboutServices
 
@@ -11,7 +12,7 @@ class ProjectImageInline(admin.TabularInline):  # или StackedInline
 
 
 
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(TranslatableAdmin):
     list_display = ('preview', 'title', 'created_at')
     list_display_links = ('preview', 'title')
     inlines = [ProjectImageInline]
@@ -42,7 +43,7 @@ admin.site.register(Project, ProjectAdmin)
 
 
 @admin.register(AboutServices)
-class ServicesAboutAdmin(admin.ModelAdmin):
+class ServicesAboutAdmin(TranslatableAdmin):
     list_display = ('preview', 'title', 'created_at')
     list_display_links = ('preview', 'title')
     readonly_fields = ('created_at',)

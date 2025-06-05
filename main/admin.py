@@ -1,12 +1,21 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from parler.admin import TranslatableAdmin
 
 from .models import Subscriber, Slider, Slogan,Services, News, Feedbacks, Partners, Video, Info
 
 
 
-admin.site.register(Slogan)
-admin.site.register(Services)
+@admin.register(Slogan)
+class SloganAdmin(TranslatableAdmin):
+    list_display = ( 'first_title', 'second_title', 'third_title' )
+    list_display_links = ('first_title', 'second_title', 'third_title')
+
+@admin.register(Services)
+class BlogPostAdmin(TranslatableAdmin):
+    list_display = ('title', 'text')
+    list_display_links = ('title',)
+    
 
 @admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
@@ -18,7 +27,7 @@ class SubscriberAdmin(admin.ModelAdmin):
 
 
 @admin.register(Slider)
-class SliderAdmin(admin.ModelAdmin):
+class SliderAdmin(TranslatableAdmin):
     list_display = ('preview', 'link', 'created_at')
     list_display_links = ('preview',)
     readonly_fields = ('created_at',)
@@ -44,9 +53,15 @@ class SliderAdmin(admin.ModelAdmin):
         return "-"
     
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(TranslatableAdmin):
     list_display = ('image_preview', 'title', 'pub_date')  # отображаем поля title и pub_date в списке новостей
     search_fields = ('title',)  # добавляем возможность поиска по названию новости
+
+    fieldsets = (
+        (None, {
+            'fields': ( 'title',  'content', 'image')
+        }),
+    )
 
     def image_preview(self, obj):
         # Создаем миниатюру изображения
@@ -61,7 +76,7 @@ admin.site.register(News, NewsAdmin)
 
 
 @admin.register(Feedbacks)
-class FeedbacksAdmin(admin.ModelAdmin):
+class FeedbacksAdmin(TranslatableAdmin):
     list_display = ('preview', 'author', 'created_at')
     list_display_links = ('preview', 'author')
     readonly_fields = ('created_at',)
@@ -129,7 +144,7 @@ class VideoAdmin(admin.ModelAdmin):
 admin.site.register(Video, VideoAdmin)
 
 
-class InfoAdmin(admin.ModelAdmin):
+class InfoAdmin(TranslatableAdmin):
     list_display = ('preview','previewImg', 'title')   
     list_display_links = ('preview', 'title', 'previewImg')      # превью в списке
     readonly_fields = ('preview',)              # превью на странице редактирования

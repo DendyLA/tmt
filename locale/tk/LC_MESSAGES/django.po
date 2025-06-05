@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 14:18+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:43
+#: .\main\templates\main\base.html:97 .\main\templates\main\main.html:125
+msgid "About us"
+msgstr "Biz barada"
+
+#: .\about\templates\about\about.html:8 .\about\templates\about\gallery.html:7
+#: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog_detail.html:5
+#: .\contacts\templates\contacts\contacts.html:6
+#: .\main\templates\main\base.html:10 .\main\templates\main\main.html:5
+#: .\main\templates\main\news_detail.html:6
+#: .\main\templates\main\news_list.html:6
+msgid "TMT Consulting Group"
+msgstr "TMT Consulting Group"
+
+#: .\about\templates\about\about.html:11
+#: .\about\templates\about\gallery.html:10 .\main\templates\main\main.html:8
+msgid ""
+"TMT Consulting Group organizes events that leave vivid impressions and "
+"contribute to the achievement of your business goals at the highest level."
+msgstr "TMT Consulting Group, Size ýatdan çykmajak täsir galdyrýan we iň ýokary derejede iş maksatlaryňyza ýetmäge goşant goşýan çäreleri guraýar."
+
+#: .\about\templates\about\about.html:25
+msgid "Projects"
+msgstr "Taslamalar"
+
+#: .\about\templates\about\about.html:27
+msgid "Services"
+msgstr "Hyzmatlarymyz"
+
+#: .\about\templates\about\about.html:40 .\about\templates\about\gallery.html:7
+#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:112
+msgid "Gallery"
+msgstr "Galereýa"
+
+#: .\about\templates\about\about.html:44
+msgid "Download report"
+msgstr "Netijäni ýüklä"
+
+#: .\about\templates\about\about.html:70
+msgid "Contact us"
+msgstr "Habarlaşmak"
+
+#: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:98
+msgid "Blog"
+msgstr "Blog"
+
+#: .\blog\templates\blog\blog.html:8
+msgid "Blog about conferences and forums"
+msgstr "Konferensiýalar we forumlar barada blog"
+
+#: .\contacts\templates\contacts\contacts.html:6
+#: .\contacts\templates\contacts\contacts.html:23
+#: .\main\templates\main\base.html:44 .\main\templates\main\base.html:99
+msgid "Contacts"
+msgstr "Habarlaşmak üçin"
+
+#: .\contacts\templates\contacts\contacts.html:9
+msgid "Asghabat, Turkmenistan"
+msgstr "Aşgabat, Türkmenistan"
+
+#: .\contacts\templates\contacts\contacts.html:54
+msgid "Name"
+msgstr "Ady"
+
+#: .\contacts\templates\contacts\contacts.html:60
+msgid "Surname"
+msgstr "Familiýa"
+
+#: .\contacts\templates\contacts\contacts.html:67
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\contacts\templates\contacts\contacts.html:73
+msgid "Email"
+msgstr "Email"
+
+#: .\contacts\templates\contacts\contacts.html:82
+msgid "Message"
+msgstr "Mazmuny"
+
+#: .\contacts\templates\contacts\contacts.html:87
+msgid "Submit"
+msgstr "Ugrat"
+
+#: .\contacts\templates\contacts\contacts.html:92
+msgid "Thank You for your message!"
+msgstr "Habarlaşanyňyz üçin sag boluň"
+
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:96
+msgid "Home"
+msgstr "Baş sahypa"
+
+#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:164
+#: .\main\templates\main\news_list.html:6
+#: .\main\templates\main\news_list.html:25
+msgid "News"
+msgstr "Täzelikler"
+
+#: .\main\templates\main\base.html:111
+msgid "Join our community"
+msgstr "Bize ýazylyň"
+
+#: .\main\templates\main\base.html:117
+msgid "All rights reserved"
+msgstr "Ähli hukuklar goralan"
+
+#: .\main\templates\main\main.html:5
+msgid "Main "
+msgstr "Baş sahypa"
+
+#: .\main\templates\main\main.html:41
+msgid "Read more"
+msgstr "Dowamyny oka"
+
+#: .\main\templates\main\main.html:59
+msgid "Let's create"
+msgstr "Geliň,"
+
+#: .\main\templates\main\main.html:59
+msgid "a project everyone"
+msgstr "hemmäni gyzyklandyrjak "
+
+#: .\main\templates\main\main.html:59
+msgid "will be talking about"
+msgstr "taslamasyny döredeliň"
+
+#: .\main\templates\main\main.html:60
+msgid ""
+"In collaboration with us are leading global organizations, major companies, "
+"and investors. Join the community of the future."
+msgstr "Biz dünýäniň öňdebaryjy guramalary, iri kompaniýalary we maýadarlary bilen ysnyşykly hyzmatdaşlykda. Geljegiň jemgyýetine goşulyň."
+
+#: .\main\templates\main\main.html:70
+msgid "Conferences"
+msgstr "Konferensiýalar"
+
+#: .\main\templates\main\main.html:71
+msgid "Organize a conference that inspires and unites."
+msgstr "Ylham berýän we birleşdirýän konferensiýa guraň."
+
+#: .\main\templates\main\main.html:80
+msgid "Exhibitions"
+msgstr "Sergiler"
+
+#: .\main\templates\main\main.html:81
+msgid "Don’t miss the chance to showcase innovations and attract partners"
+msgstr "Innowasion işleri görkezmek we hyzmatdaşlary çekmek mümkinçiligini elden gidirmäň. "
+
+#: .\main\templates\main\main.html:90
+msgid "Virtual offices"
+msgstr "Wirtual ofislar"
+
+#: .\main\templates\main\main.html:91
+msgid "We ensure accessibility, convenience, and full business productivity"
+msgstr "Elýeterliligi, amatlylygy we doly iş öndürijiligini üpjün edýäris."
+
+#: .\main\templates\main\main.html:135
+msgid "More"
+msgstr "Dowam"
+
+#: .\main\templates\main\main.html:146
+msgid "Our Services"
+msgstr "Hyzmatlarymyz"
+
+#: .\main\templates\main\main.html:175 .\main\templates\main\news_list.html:36
+msgid "Read more..."
+msgstr "Dowamyny oka..."
+
+#: .\main\templates\main\main.html:181
+msgid "All news"
+msgstr "Täzelikler"
+
+#: .\main\templates\main\main.html:188
+msgid "Moments"
+msgstr "Biziň"
+
+#: .\main\templates\main\main.html:188
+msgid "from our"
+msgstr "Ajaýyp"
+
+#: .\main\templates\main\main.html:188
+msgid "events"
+msgstr "pursatlarymyz"
+
+#: .\main\templates\main\main.html:211
+msgid "Our Partners"
+msgstr "Hyzmatdaşlarymyz"
+
+#: .\main\templates\main\news_detail.html:22
+msgid "Back to News"
+msgstr "Täzeliklere"
+
+#: .\main\templates\main\news_detail.html:41
+msgid "Latest News"
+msgstr "Soňky täzelikler"
+
+#: .\main\templates\main\news_list.html:9
+msgid "TMT Consulting Group News"
+msgstr "TMT Consulting Group Täzelikler"

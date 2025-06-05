@@ -1,8 +1,9 @@
 {% extends "main/base.html" %}
 
+{% load i18n %}
 {% load custom_filters %}
 
-{% block title %}{{ news.title }} | TMT Consulting Group{% endblock %}
+{% block title %}{{ news.title }} | {% trans "TMT Consulting Group" %} {% endblock %}
 
 {% block meta %}
     <meta name="description" content="{{ news.content|prepare_meta }}">
@@ -18,7 +19,7 @@
 <section class="news" >
 	<div class="container">
 		<a href="{% url 'news_list' %}" class="news__link"  data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
-			<button>Back to News</button >
+			<button>{% trans 'Back to News' %}</button >
 		</a>
 		<div class="news__wrapper" >
 			<div class="news__main"  data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
@@ -37,7 +38,7 @@
 
 			<div class="news__latest"  data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="top-bottom">
 				<div class="latest">
-					<div class="latest__headTitle">Latest News</div>
+					<div class="latest__headTitle">{% trans 'Latest News' %}</div>
 					<div class="latest__content">
 						{% for item in latest_news %}
 						<a href="{% url 'news_detail' item.slug %}" class="latest__item">

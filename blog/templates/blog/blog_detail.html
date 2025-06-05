@@ -1,8 +1,8 @@
 {% extends "main/base.html" %}
-
+{% load i18n %}
 {% load custom_filters %}
 
-{% block title %}{{ blog.title }} | TMT Consulting Group{% endblock %}
+{% block title %}{{ blog.title }} | {% trans "TMT Consulting Group" %}{% endblock %}
 
 {% block meta %}
     <meta name="description" content="{{ blog.text|prepare_meta }}">

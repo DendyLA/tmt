@@ -1,13 +1,13 @@
 {% extends "main/base.html" %}
 
-
+{% load i18n %}
 {% load custom_filters %}
 
 
-{% block title %}Gallery | TMT Consulting Group{% endblock %}
+{% block title %}{% trans 'Gallery' %} | {% trans 'TMT Consulting Group' %}{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level.">
+    <meta name="description" content="{% trans 'TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level.' %}">
 {% endblock %}
 
 
@@ -20,7 +20,7 @@
 {% block content %}
 <section class="gallery">
 	<div class="container">
-		<h1 class="title">Gallery</h1>
+		<h1 class="title">{% trans 'Gallery' %}</h1>
 		<div class="gallery__wrapper">
 				{% for item in image %}
 				<div class="gallery__item">

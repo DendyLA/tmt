@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from parler.admin import TranslatableAdmin
 
 from .models import Blog
 
 @admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
+class BlogAdmin(TranslatableAdmin):
     list_display = ('preview', 'title', 'created_at')
     list_display_links = ('preview', 'title')
     readonly_fields = ('created_at',)

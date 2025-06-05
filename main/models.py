@@ -4,6 +4,10 @@ from PIL import Image
 from io import BytesIO
 from django.core.files.base import ContentFile
 from ckeditor_uploader.fields import RichTextUploadingField
+from parler.models import TranslatableModel, TranslatedFields
+
+from django.utils.translation import get_language
+from parler.utils.context import switch_language
 
 from django.utils.text import slugify
 
@@ -19,43 +23,60 @@ class Subscriber(models.Model):
         return self.email
 
 
-class Slogan(models.Model):
-    first_title = models.CharField(max_length=100, verbose_name="Первый Заголовок")
-    second_title = models.CharField(max_length=100, verbose_name="Первый Заголовок")
-    third_title = models.CharField(max_length=100, verbose_name="Первый Заголовок")
+class Slogan(TranslatableModel):
+    translations = TranslatedFields(
+        first_title = models.CharField(max_length=100, verbose_name="Первый Заголовок", blank=True),
+        second_title = models.CharField(max_length=100, verbose_name="Первый Заголовок", blank=True),
+        third_title = models.CharField(max_length=100, verbose_name="Первый Заголовок", blank=True)
+    )
+    
 
     class Meta:
         verbose_name = "Слоган"
         verbose_name_plural = "Слоганы"
     
     def __str__(self):
-        return self.first_title
+        return self.first_title or 'No data'
 
 
 
-class Services(models.Model):
-    title = models.CharField(max_length=250, verbose_name='Заголовок')
-    text = models.TextField(verbose_name='Текст')
+class Services(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=250, verbose_name='Заголовок', blank=True),
+        text = models.TextField(verbose_name='Текст', blank=True)  
+    )
+   
     class Meta:
         verbose_name = 'Услуга'
         verbose_name_plural = "Услуги"
 
     def __str__(self):
-        return self.title
+        return self.title or 'No data'
 
 
-class News(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Заголовок')
-    image = models.ImageField(upload_to='news_images/', verbose_name='Фото')
-    content = RichTextUploadingField(verbose_name='Текст')
+class News(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=255, verbose_name='Заголовок', blank=True),
+        content = RichTextUploadingField(verbose_name='Текст', blank=True)
+    )
+     
+    image = models.ImageField(upload_to='news_images/', verbose_name='Фото', blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique=True, max_length=500, verbose_name='Slug', blank=True)
 
     def save(self, *args, **kwargs):
-
-        if not self.slug: 
-            self.slug = slugify(self.title)
-
+        if not self.slug:
+            current_lang = get_language()
+            with switch_language(self, current_lang):
+                title = self.safe_translation_getter('title', any_language=True)
+            if title:
+                base_slug = slugify(title)[:500]  # Ограничиваем длину
+                slug = base_slug
+                counter = 1
+                while News.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                    slug = f"{base_slug}-{counter}"
+                    counter += 1
+                self.slug = slug
 
         if self.image:
             img = Image.open(self.image)
@@ -76,31 +97,31 @@ class News(models.Model):
 
             output.seek(0)
             self.image = ContentFile(output.read(), self.image.name)
-            
 
         super().save(*args, **kwargs)
-    
+
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
 
     def __str__(self):
-        return self.title
+        return self.title or 'No data'
 
 
-class Slider(models.Model):
-    image = models.ImageField(
+class Slider(TranslatableModel):
+    translations = TranslatedFields(
+        image = models.ImageField(
         upload_to='slider/',
-        verbose_name="Изображение"
+        verbose_name="Изображение",
+        blank=True
+        ),
     )
     created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name="Дата создания"
+            auto_now_add=True,
+            verbose_name="Дата создания"
     )
     link = models.URLField(verbose_name='Ссылка', blank=True)
     
-
-
     def save(self, *args, **kwargs):
         if self.image:
             img = Image.open(self.image)
@@ -131,13 +152,15 @@ class Slider(models.Model):
         ordering = ['-created_at']
         
     def __str__(self):
-        return self.link
+        return self.link or 'No data'
 
 
-class Feedbacks(models.Model):
-    image = models.ImageField( upload_to='feedbacks', verbose_name='Изображение' )
-    text = RichTextUploadingField(verbose_name='Отзыв')
-    author = models.CharField(max_length=200, verbose_name='Автор')
+class Feedbacks(TranslatableModel):
+    translations = TranslatedFields(
+        text = RichTextUploadingField(verbose_name='Отзыв', blank=True),
+        author = models.CharField(max_length=200, verbose_name='Автор', blank=True)
+    )
+    image = models.ImageField( upload_to='feedbacks/', verbose_name='Изображение')
     created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name="Дата создания"
@@ -173,41 +196,18 @@ class Feedbacks(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return self.author
+        return self.author or 'No data'
     
 
     
 class Partners(models.Model):
     title = models.CharField(verbose_name='Название', blank=True, max_length=350)
-    image = models.ImageField( upload_to='partners', verbose_name='Изображение' )
+    image = models.ImageField( upload_to='partners/', verbose_name='Изображение', blank=True )
     url = models.URLField(verbose_name='Ссылка', max_length=200, blank=True)
     created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name="Дата создания"
     )
-
-    def save(self, *args, **kwargs):
-        if self.image:
-            img = Image.open(self.image)
-
-            # Преобразование в RGB
-            if img.mode != 'RGB':
-                img = img.convert('RGB')
-
-            quality = 85
-            output = BytesIO()
-            img.save(output, format='JPEG', quality=quality, optimize=True)
-
-            # Сжимаем до тех пор, пока не станет < 2MB или качество не опустится до 30
-            while output.tell() > 2 * 1024 * 1024 and quality > 30:
-                quality -= 5
-                output = BytesIO()
-                img.save(output, format='JPEG', quality=quality, optimize=True)
-
-            output.seek(0)
-            self.image = ContentFile(output.read(), self.image.name)
-
-        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Партнёр'
@@ -243,9 +243,12 @@ class Video(models.Model):
         return self.title
     
 
-class Info(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Заголовок')
-    text = RichTextUploadingField(verbose_name='Текст')
+class Info(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=200, verbose_name='Заголовок',blank=True, null=True),
+        text = RichTextUploadingField(verbose_name='Текст',blank=True, null=True)
+    )
+    
     file = models.FileField(upload_to='videosMain/', verbose_name='Видеоролик')  # Файл будет храниться в media/videos/
     poster = models.ImageField(upload_to='poster/', verbose_name='Превью видео')
 
@@ -266,4 +269,4 @@ class Info(models.Model):
     preview.short_description = "Превью"
         
     def __str__(self):
-        return self.title
+        return self.title or 'No data'

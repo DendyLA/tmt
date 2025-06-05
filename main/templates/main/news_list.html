@@ -1,12 +1,12 @@
 {% extends "main/base.html" %}
 
-
+{% load i18n %}
 {% load custom_filters %}
 
-{% block title %}News | TMT Consulting Group{% endblock %}
+{% block title %}{% trans "News" %} | {% trans "TMT Consulting Group" %}{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="TMT Consulting Group News">
+    <meta name="description" content="{% trans "TMT Consulting Group News" %}">
 {% endblock %}
 
 
@@ -22,10 +22,10 @@
 
 <section class="news">
 	<div class="container">
-		<h3 class="news__headTitle title" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">News</h3>
+		<h3 class="news__headTitle title" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">{% trans 'News' %}</h3>
 		<div class="news__wrapper">
 			{% for item in page_obj %}
-			<a href="{% url 'news_detail' item.slug %}" class="news__link" data-aos='fade-up' data-aos-duration="500" data-aos-anchor-placement="top-center">
+			<a href="{% url 'news_detail' item.slug %}" class="news__link" >
 				<div class="news__item">
 					<div class="news__top">
 						<img src="{{ item.image.url }}" alt="{{ item.title }}" class="news__img">
@@ -33,7 +33,7 @@
 					<div class="news__bottom">
 						<h2 class="news__title">{{ item.title|trim_title:"30,3"|linebreaksbr }}</h2>
 						<div class="news__date">{{ item.pub_date|date:"d.m.Y" }}</div>
-						<div class="news__more">Read more...</div > 
+						<div class="news__more">{% trans 'Read more...' %}</div > 
 					</div>
 				</div>
 			</a>

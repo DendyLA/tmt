@@ -3,14 +3,18 @@ from PIL import Image
 from io import BytesIO
 from django.core.files.base import ContentFile
 from ckeditor_uploader.fields import RichTextUploadingField
+from parler.models import TranslatableModel, TranslatedFields
 
 from django.utils.text import slugify
 
 
-class Blog(models.Model):
-    title = models.CharField(max_length=500, verbose_name='Заголовок')
-    image = models.ImageField(upload_to='blog', verbose_name='Изображение')
-    text = RichTextUploadingField(verbose_name='Текст')
+class Blog(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=500, verbose_name='Заголовок', blank=True),
+        text = RichTextUploadingField(verbose_name='Текст', blank=True)
+    )
+    
+    image = models.ImageField(upload_to='blog/', verbose_name='Изображение')
     slug = models.SlugField(unique=True, max_length=500, verbose_name='Slug', blank=True)
     created_at = models.DateTimeField(
         auto_now_add=True,
@@ -51,4 +55,4 @@ class Blog(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return self.title
+        return self.title or 'No data'

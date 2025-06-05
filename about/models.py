@@ -3,15 +3,17 @@ from PIL import Image
 from io import BytesIO
 from django.core.files.base import ContentFile
 from ckeditor_uploader.fields import RichTextUploadingField
-
+from parler.models import TranslatableModel, TranslatedFields
 
 from ckeditor.fields import RichTextField
 
-class Project(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название проекта')
-    descr = RichTextUploadingField(verbose_name='Описание')
+class Project(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=255, verbose_name='Название проекта', blank=True, null=True),
+        descr = RichTextUploadingField(verbose_name='Описание', blank=True, null=True),
+        pdf = models.FileField(upload_to='project_pdfs/', blank=True, null=True, verbose_name='Презентация (PDF)')
+    )
     image = models.ImageField(upload_to='projects__card/', verbose_name='Изображение')
-    pdf = models.FileField(upload_to='project_pdfs/', blank=True, null=True, verbose_name='Презентация (PDF)')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     def save(self, *args, **kwargs):
@@ -44,7 +46,7 @@ class Project(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.title or "No data"
 
 
 class ProjectImage(models.Model):
@@ -89,10 +91,12 @@ class ProjectImage(models.Model):
     
 
 
-class AboutServices(models.Model):
+class AboutServices(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=355, verbose_name='Название Услуги', blank=True),
+        text = RichTextField(verbose_name='Описание', blank=True)
+    )
     image = models.ImageField(upload_to='services/', verbose_name='Изображение')
-    title = models.CharField(max_length=355, verbose_name='Название Услуги')
-    text = RichTextField(verbose_name='Описание')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     def save(self, *args, **kwargs):
@@ -123,4 +127,4 @@ class AboutServices(models.Model):
         verbose_name_plural = 'Услуги - О нас'
 
     def __str__(self):
-        return f"Изображение для проекта: {self.title}"
+        return f"Изображение для проекта: {self.title}" or 'No data'
