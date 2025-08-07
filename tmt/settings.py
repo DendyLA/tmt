@@ -79,7 +79,8 @@ INSTALLED_APPS = [
 	'main',
 	'blog',
 	'about',
-	'contacts'
+	'contacts',
+	'opportunity'
 ]
 
 

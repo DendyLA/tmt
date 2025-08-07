@@ -6,19 +6,21 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-20 14:18+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-08-04 12:56+0500\n"
+"PO-Revision-Date: 2025-08-04 12:57+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:43
-#: .\main\templates\main\base.html:97 .\main\templates\main\main.html:125
+"X-Generator: Poedit 3.6\n"
+
+#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:44
+#: .\main\templates\main\base.html:90 .\main\templates\main\main.html:125
 msgid "About us"
 msgstr "Biz barada"
 
@@ -36,7 +38,9 @@ msgstr "TMT Consulting Group"
 msgid ""
 "TMT Consulting Group organizes events that leave vivid impressions and "
 "contribute to the achievement of your business goals at the highest level."
-msgstr "TMT Consulting Group, Size ýatdan çykmajak täsir galdyrýan we iň ýokary derejede iş maksatlaryňyza ýetmäge goşant goşýan çäreleri guraýar."
+msgstr ""
+"TMT Consulting Group, Size ýatdan çykmajak täsir galdyrýan we iň ýokary "
+"derejede iş maksatlaryňyza ýetmäge goşant goşýan çäreleri guraýar."
 
 #: .\about\templates\about\about.html:25
 msgid "Projects"
@@ -60,7 +64,7 @@ msgid "Contact us"
 msgstr "Habarlaşmak"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
-#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:98
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:91
 msgid "Blog"
 msgstr "Blog"
 
@@ -70,7 +74,7 @@ msgstr "Konferensiýalar we forumlar barada blog"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\main\templates\main\base.html:44 .\main\templates\main\base.html:99
+#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:92
 msgid "Contacts"
 msgstr "Habarlaşmak üçin"
 
@@ -106,7 +110,7 @@ msgstr "Ugrat"
 msgid "Thank You for your message!"
 msgstr "Habarlaşanyňyz üçin sag boluň"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:96
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:89
 msgid "Home"
 msgstr "Baş sahypa"
 
@@ -116,11 +120,15 @@ msgstr "Baş sahypa"
 msgid "News"
 msgstr "Täzelikler"
 
-#: .\main\templates\main\base.html:111
+#: .\main\templates\main\base.html:42
+msgid "Opportunities"
+msgstr "Mümkinçilikler"
+
+#: .\main\templates\main\base.html:104
 msgid "Join our community"
 msgstr "Bize ýazylyň"
 
-#: .\main\templates\main\base.html:117
+#: .\main\templates\main\base.html:110
 msgid "All rights reserved"
 msgstr "Ähli hukuklar goralan"
 
@@ -148,7 +156,9 @@ msgstr "taslamasyny döredeliň"
 msgid ""
 "In collaboration with us are leading global organizations, major companies, "
 "and investors. Join the community of the future."
-msgstr "Biz dünýäniň öňdebaryjy guramalary, iri kompaniýalary we maýadarlary bilen ysnyşykly hyzmatdaşlykda. Geljegiň jemgyýetine goşulyň."
+msgstr ""
+"Biz dünýäniň öňdebaryjy guramalary, iri kompaniýalary we maýadarlary bilen "
+"ysnyşykly hyzmatdaşlykda. Geljegiň jemgyýetine goşulyň."
 
 #: .\main\templates\main\main.html:70
 msgid "Conferences"
@@ -164,7 +174,9 @@ msgstr "Sergiler"
 
 #: .\main\templates\main\main.html:81
 msgid "Don’t miss the chance to showcase innovations and attract partners"
-msgstr "Innowasion işleri görkezmek we hyzmatdaşlary çekmek mümkinçiligini elden gidirmäň. "
+msgstr ""
+"Innowasion işleri görkezmek we hyzmatdaşlary çekmek mümkinçiligini elden "
+"gidirmäň. "
 
 #: .\main\templates\main\main.html:90
 msgid "Virtual offices"
@@ -217,3 +229,15 @@ msgstr "Soňky täzelikler"
 #: .\main\templates\main\news_list.html:9
 msgid "TMT Consulting Group News"
 msgstr "TMT Consulting Group Täzelikler"
+
+#: .\tmt\settings.py:19
+msgid "English"
+msgstr ""
+
+#: .\tmt\settings.py:20
+msgid "Russian"
+msgstr ""
+
+#: .\tmt\settings.py:21
+msgid "Turkmen"
+msgstr ""

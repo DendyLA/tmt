@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Opportunities" %}{% endblock title %}
+
+{% block meta %}
+<meta name="description" content="{% trans "TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level." %}">
+{% endblock meta %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'opportunity/css/opportunity.css' %}">
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<section class="opportunity">
+	<div class="opportunity__top">
+		<div class="opportunity__item">Тендеры</div>
+		<div class="opportunity__item">Вакансии</div>
+	</div>
+</section>
+
+{% endblock %}
+
+
+{% block extrajs %}{% endblock %}

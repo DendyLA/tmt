@@ -6,22 +6,22 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-20 12:06+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-08-04 12:31+0500\n"
+"PO-Revision-Date: 2025-08-04 12:57+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.6\n"
 
-#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:43
-#: .\main\templates\main\base.html:97 .\main\templates\main\main.html:125
+#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:44
+#: .\main\templates\main\base.html:90 .\main\templates\main\main.html:125
 msgid "About us"
 msgstr "О нас"
 
@@ -66,7 +66,7 @@ msgid "Contact us"
 msgstr "Связаться"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
-#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:98
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:91
 msgid "Blog"
 msgstr "Блог"
 
@@ -76,7 +76,7 @@ msgstr "Блог о конференциях и форумах"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\main\templates\main\base.html:44 .\main\templates\main\base.html:99
+#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:92
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -112,7 +112,7 @@ msgstr "Отправить"
 msgid "Thank You for your message!"
 msgstr "Спасибо что связались с нами"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:96
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:89
 msgid "Home"
 msgstr "Главная"
 
@@ -122,11 +122,15 @@ msgstr "Главная"
 msgid "News"
 msgstr "Новости"
 
-#: .\main\templates\main\base.html:111
+#: .\main\templates\main\base.html:42
+msgid "Opportunities"
+msgstr "Возможности"
+
+#: .\main\templates\main\base.html:104
 msgid "Join our community"
 msgstr "Присоединяй к нам"
 
-#: .\main\templates\main\base.html:117
+#: .\main\templates\main\base.html:110
 msgid "All rights reserved"
 msgstr "Все права защищены"
 
@@ -227,3 +231,15 @@ msgstr "Последние новости"
 #: .\main\templates\main\news_list.html:9
 msgid "TMT Consulting Group News"
 msgstr "TMT Consulting Group Новости"
+
+#: .\tmt\settings.py:19
+msgid "English"
+msgstr ""
+
+#: .\tmt\settings.py:20
+msgid "Russian"
+msgstr ""
+
+#: .\tmt\settings.py:21
+msgid "Turkmen"
+msgstr ""

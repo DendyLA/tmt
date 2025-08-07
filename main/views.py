@@ -57,3 +57,4 @@ def news_detail(request, slug):
     latest_news = News.objects.order_by('-pub_date')[:3]
     return render(request, 'main/news_detail.html', {'news': news, 'latest_news' : latest_news})
 
+

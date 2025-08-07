@@ -39,6 +39,7 @@
                     <li class="nav__item"><a href="{% url 'home' %}">{% trans "Home" %} </a></li>
                     <li class="nav__item"><a href="{% url "blog" %}">{% trans "Blog" %}</a></li>
                     <li class="nav__item"><a href="{% url 'news_list' %}">{% trans "News" %}</a></li>
+                    <li class="nav__item"><a href="{% url 'tenders' %}">{% trans "Opportunities" %}</a></li>
                     <li>|</li>
                     <li class="nav__item nav__about"><a href="{% url "about" %}">{% trans "About us" %} </a></li>
                     <li class="nav__item"><a href="{% url "contact" %}">{% trans "Contacts" %}</a></li>
@@ -58,13 +59,6 @@
                             <img src="{% static 'main/img/tk.png' %}" alt="Türkmen dili" style="width: 32px; height: 20px; cursor: pointer;">
                         </button>
                     </form>
-                    {% comment %} <li class="nav__item">
-                        <ul class="nav__language">
-                            <li class="language__item"><a href="">Русский</a></li>
-                            <li class="language__item"><a href="">English</a></li>
-                            <li class="language__item"><a href="">Turkmence</a></li>
-                        </ul>
-                    </li> {% endcomment %}
                 </ul>
                 <div class="nav__mobile">
                     <button class="hamburger hamburger--elastic " type="button">

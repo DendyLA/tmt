@@ -11,6 +11,7 @@ from main.views import main, subscribe, news_list, news_detail
 from blog.views import blog, blog_detail
 from contacts.views import contact
 
+
 from .sitemaps import (
     StaticViewI18nSitemap,
     ProjectImageI18nSitemap,
@@ -45,6 +46,7 @@ urlpatterns += i18n_patterns(
     path('blog/<slug:slug>/', blog_detail, name='blog_detail'),
     path('about/', include('about.urls')),
     path('contact/', contact, name='contact'),
+    path('opportunities/', include('opportunity.urls'))
 )
 
 # Обработка медиафайлов в режиме DEBUG
