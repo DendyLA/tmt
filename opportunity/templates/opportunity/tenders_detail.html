@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% block title %}{{ tender.title|truncatechars:60 }}{% endblock title %}
+
+{% block meta %}
+<meta name="description" content={{ tender.text|truncatechars:160 }}>
+{% endblock meta %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'opportunity/css/detail.css' %}">
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<section class="detail">
+	<div class="container">
+		<a href={% url "tenders" %} class="prev__button">{% trans "All tenders" %}</a>
+
+		<div class="detail__date">{{ tender.created_at|date:'d.m.y' }}</div>
+
+		<h1 class="detail__title">{{ tender.title }}</h1>
+		<div class="detail__text">{{ tender.text|safe }}</div>
+	</div>
+</section>
+
+{% endblock %}
+
+
+{% block extrajs %}{% endblock %}

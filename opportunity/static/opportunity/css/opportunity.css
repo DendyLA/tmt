@@ -1,0 +1,153 @@
+.opportunity{
+	padding: 3rem 0;
+}
+
+.opportunity__maintitle{
+	font-size: 3rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+	margin-top: 3rem;
+}
+
+.opportunity__item{
+	border: 2px solid #97c680;
+	border-radius: 20px;
+	padding: 1.3rem 1.5rem;
+	transition: all .3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1.2rem;
+}
+
+.opportunity__item:hover{
+	border-color: #feba88;
+	transform: scale(1.05);
+}
+
+.opportunity__title{
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.opportunity__text{
+	font-size: 1.2rem;
+}
+
+.opportunity__date{
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+.opportunity__wrapper{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+
+.pagination{
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.pagination__num{
+	border: 1px solid #97c680;
+	padding: .2rem .5rem;
+	border-radius: 4px;
+}
+
+.pagination__thisnum{
+	border-color: #feba88;
+}
+
+.pagination__prev, .pagination__next{
+	font-size: 1.3rem;
+	transition: all .3s;
+}
+
+.pagination__next:hover{
+	transform: translateX(10px);
+}
+
+.pagination__prev:hover{
+	transform: translateX(-10px);
+}
+
+.opportunity__top{
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+.pagination__thisnum{
+	font-weight: 700;
+}
+
+.pagination{
+	margin-top: 2rem;
+}
+.vacancies__none{
+	font-size: 2rem;
+	color: #6a6a6a;
+	text-align: center;
+}
+
+.opportunity__nav{
+	font-size: 2rem;
+	border: 2px solid#97c680;
+	border-radius: 7px;
+	padding: 0.5rem 2rem;
+	background-color: #97c680;
+	color: #fff;
+	transition: all .3s;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.opportunity__nav:hover{
+	background-color: #97c68000;
+	color: #97c680;
+}
+
+.opportunity__nav.active{
+	background-color: #97c68000;
+	color: #97c680;
+}
+
+
+.opportunity__extra{
+	margin-top: 6rem;
+	padding: 3rem 0;
+	background-color: #97c680;
+}
+
+.extra__text{
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media  (min-width: 400px) and (max-width: 650px) {
+	.extra__text{
+		font-size: 1.3rem;
+	}
+}
+
+@media  (min-width: 320px) and (max-width: 400px){
+	.extra__text{
+		font-size: 1.3rem;
+	}
+	.opportunity__top{
+		flex-direction: column;
+	}
+	.opportunity__maintitle{
+		font-size: 2.5rem;
+	}
+}

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-04 12:31+0500\n"
-"PO-Revision-Date: 2025-08-04 12:57+0500\n"
+"POT-Creation-Date: 2025-08-12 11:17+0500\n"
+"PO-Revision-Date: 2025-08-12 11:18+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -30,7 +30,6 @@ msgstr "О нас"
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\main\templates\main\base.html:10 .\main\templates\main\main.html:5
 #: .\main\templates\main\news_detail.html:6
-#: .\main\templates\main\news_list.html:6
 msgid "TMT Consulting Group"
 msgstr "TMT Consulting Group"
 
@@ -118,7 +117,6 @@ msgstr "Главная"
 
 #: .\main\templates\main\base.html:41 .\main\templates\main\main.html:164
 #: .\main\templates\main\news_list.html:6
-#: .\main\templates\main\news_list.html:25
 msgid "News"
 msgstr "Новости"
 
@@ -195,10 +193,8 @@ msgid "Our Services"
 msgstr "Наши Услуги"
 
 #: .\main\templates\main\main.html:175 .\main\templates\main\news_list.html:36
-#, fuzzy
-#| msgid "Read more"
 msgid "Read more..."
-msgstr "Подробнее"
+msgstr "Подробнее..."
 
 #: .\main\templates\main\main.html:181
 msgid "All news"
@@ -228,18 +224,169 @@ msgstr "Вернутся к Новостям"
 msgid "Latest News"
 msgstr "Последние новости"
 
+#: .\main\templates\main\news_list.html:6
+msgid ""
+"Turkmenistan News — Latest Events and Current News of the Country | TMT "
+"Consulting Group"
+msgstr ""
+"Новости Туркменистана — Последние события и актуальные новости страны | TMT "
+"Consulting Group"
+
 #: .\main\templates\main\news_list.html:9
-msgid "TMT Consulting Group News"
-msgstr "TMT Consulting Group Новости"
+msgid ""
+"Read the latest news from Turkmenistan. Fresh events, politics, economy, "
+"sports, and culture. Stay up to date with all the current news of the "
+"country."
+msgstr ""
+"Читайте последние новости Туркменистана. Свежие события, политика, "
+"экономика, спорт и культура. Будьте в курсе всех актуальных новостей страны."
+
+#: .\main\templates\main\news_list.html:25
+msgid "Turkmenistan News"
+msgstr "Новости Туркменистана"
+
+#: .\opportunity\templates\opportunity\opportunity.html:7
+msgid "Tenders in Turkmenistan — Current Procurement | TMT Consulting Group"
+msgstr "Тендеры в Туркменистане — Актуальные закупки | TMT Consulting Group"
+
+#: .\opportunity\templates\opportunity\opportunity.html:10
+msgid ""
+"Current tenders in Turkmenistan and Ashgabat. Information about procurement, "
+"competitions, and bidding. Find tenders and apply online."
+msgstr ""
+"Актуальные тендеры в Туркменистане и Ашхабаде. Информация о закупках, "
+"конкурсах и торгах. Найдите тендеры и подайте заявку онлайн."
+
+#: .\opportunity\templates\opportunity\opportunity.html:25
+#: .\opportunity\templates\opportunity\vacancies.html:25
+msgid "Tenders"
+msgstr "Тендеры"
+
+#: .\opportunity\templates\opportunity\opportunity.html:26
+#: .\opportunity\templates\opportunity\vacancies.html:26
+msgid "Vacancies"
+msgstr "Вакансии"
+
+#: .\opportunity\templates\opportunity\opportunity.html:29
+msgid "Tenders in Turkmenistan"
+msgstr "Тендеры в Туркменистане"
+
+#: .\opportunity\templates\opportunity\opportunity.html:41
+#: .\opportunity\templates\opportunity\vacancies.html:46
+msgid "« Previous"
+msgstr "« Предыдущая"
+
+#: .\opportunity\templates\opportunity\opportunity.html:53
+#: .\opportunity\templates\opportunity\vacancies.html:58
+msgid "Next »"
+msgstr "Следующая »"
+
+#: .\opportunity\templates\opportunity\opportunity.html:66
+msgid ""
+"\n"
+"\t\t\tWelcome to the Tenders Section of Turkmenistan. Here you will find "
+"current tenders in Ashgabat and other regions of the country. We publish "
+"information about public and private procurement, competitions, and bidding "
+"to help businesses and entrepreneurs find profitable contracts. <br> <br>\n"
+"\n"
+"\t\t\tOur catalog of tenders in Turkmenistan is updated daily.<br> <br>\n"
+"\n"
+"\t\t\tLooking for tenders in Ashgabat? We have collected the latest offers "
+"from government organizations, large corporations, and private companies. "
+"Submit your application directly on the website and participate in the "
+"competition.\n"
+"\t\t\t"
+msgstr ""
+"\t\t\tДобро пожаловать в раздел тендеров Туркменистана. Здесь вы найдете "
+"актуальные тендеры в Ашхабаде и других регионах страны. Мы публикуем "
+"информацию о государственных и частных закупках, конкурсах и торгах, чтобы "
+"помочь компаниям и предпринимателям найти выгодные контракты <br> <br>\n"
+"\n"
+"\n"
+"\t\t\tНаш каталог тендеров в Туркменистане обновляется ежедневно. <br> "
+"<br> \n"
+"\n"
+"\t\t\tИщете тендеры в Ашхабаде? Мы собрали свежие предложения от "
+"государственных организаций, крупных корпораций и частных компаний. Подайте "
+"заявку прямо на сайте и участвуйте в конкурсе. \n"
+"\t\t\t"
+
+#: .\opportunity\templates\opportunity\tenders_detail.html:24
+#: .\opportunity\templates\opportunity\vacancies_detail.html:24
+msgid "All tenders"
+msgstr "Все Тендеры"
+
+#: .\opportunity\templates\opportunity\vacancies.html:7
+msgid ""
+"Job Vacancies in Turkmenistan - Employment in Ashgabat | TMT Consulting Group"
+msgstr ""
+"Вакансии в Туркменистане — трудоустройство в Ашхабаде | TMT Consulting Group"
+
+#: .\opportunity\templates\opportunity\vacancies.html:10
+msgid ""
+"Latest Job Vacancies in Turkmenistan & Ashgabat. Find jobs across various "
+"sectors: IT, construction, trade, healthcare. Daily updates."
+msgstr ""
+"Последние вакансии в Туркменистане и Ашхабаде. Найдите работу в различных "
+"сферах: IT, строительстве, торговле, здравоохранении. Обновления каждый день."
+
+#: .\opportunity\templates\opportunity\vacancies.html:29
+msgid "Job Vacancies in Turkmenistan"
+msgstr "Вакансии в Туркменистане"
+
+#: .\opportunity\templates\opportunity\vacancies.html:40
+msgid "There are no vacancies at the moment"
+msgstr "На данный момент нет вакансий"
+
+#: .\opportunity\templates\opportunity\vacancies.html:70
+msgid ""
+"\n"
+"\t\t\tLooking for a job in Turkmenistan? This page features current job "
+"vacancies in Ashgabat and other cities across the country. Here you’ll find "
+"offers from government organizations, international companies, and private "
+"employers in various fields—from IT and construction to trade, healthcare, "
+"and education. <br> <br>\n"
+"\n"
+"\t\t\tWe update the list of job vacancies in Turkmenistan daily so you can "
+"be among the first to discover new opportunities. <br> <br>\n"
+"\n"
+"\t\t\tIf you’re interested in jobs in Ashgabat, you’ll find everything from "
+"entry-level positions for beginners to high-paying roles for experienced "
+"professionals. We work directly with employers, ensuring up-to-date "
+"information and a quick response to your application. <br> <br>\n"
+"\n"
+"\t\t\tStart your job search in Turkmenistan today—submit your CV and take "
+"the first step toward a new career!\n"
+"\t\t\t"
+msgstr ""
+"Ищете работу в Туркменистане? На этой странице представлены актуальные "
+"вакансии в Ашхабаде и других городах страны. Здесь вы найдете предложения от "
+"государственных организаций, международных компаний и частных работодателей "
+"в различных сферах — от IT и строительства до торговли, здравоохранения и "
+"образования.\n"
+"\n"
+"Мы ежедневно обновляем список вакансий в Туркменистане, чтобы вы могли "
+"первыми узнать о новых возможностях.<br> <br>\n"
+"\n"
+"Если вас интересует работа в Ашхабаде, вы найдете здесь как начальные "
+"позиции для новичков, так и высокооплачиваемые должности для опытных "
+"специалистов. Мы работаем напрямую с работодателями, обеспечивая "
+"актуальность информации и быстрый отклик на вашу заявку.<br> <br>\n"
+"\n"
+"Начните поиск работы в Туркменистане уже сегодня — отправьте свое резюме и "
+"сделайте первый шаг к новой карьере!"
 
 #: .\tmt\settings.py:19
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 #: .\tmt\settings.py:20
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: .\tmt\settings.py:21
 msgid "Turkmen"
-msgstr ""
+msgstr "Туркменский"
+
+#~ msgid "TMT Consulting Group News"
+#~ msgstr "TMT Consulting Group Новости"

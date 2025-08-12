@@ -1,0 +1,35 @@
+.detail{
+	padding: 3rem 0;
+}
+
+.detail__date{
+	color: #6b6b6b;
+	margin-top: 2rem;
+}
+
+.detail__title{
+	font-size: 3rem;
+	font-weight: 600;
+	margin: 0rem 0 2rem 0;
+}
+
+.detail__text{
+	font-size: 1.3rem;
+}
+
+.prev__button{
+	font-size: 1.3rem;
+	padding: .5rem 1rem;
+	background-color: #97c680;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	cursor: pointer;
+	transition: all .3s;
+	font-weight: 600;
+}
+
+.prev__button:hover{
+	background-color: #feba88;
+}

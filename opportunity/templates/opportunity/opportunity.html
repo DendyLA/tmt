@@ -4,10 +4,10 @@
 
 {% load i18n %}
 
-{% block title %}{% trans "Opportunities" %}{% endblock title %}
+{% block title %}{% trans "Tenders in Turkmenistan — Current Procurement | TMT Consulting Group" %}{% endblock title %}
 
 {% block meta %}
-<meta name="description" content="{% trans "TMT Consulting Group organizes events that leave vivid impressions and contribute to the achievement of your business goals at the highest level." %}">
+<meta name="description" content="{% trans "Current tenders in Turkmenistan and Ashgabat. Information about procurement, competitions, and bidding. Find tenders and apply online." %}">
 {% endblock meta %}
 
 {% block extracss %}
@@ -20,9 +20,59 @@
 {% block content %}
 
 <section class="opportunity">
-	<div class="opportunity__top">
-		<div class="opportunity__item">Тендеры</div>
-		<div class="opportunity__item">Вакансии</div>
+	<div class="container">
+		<div class="opportunity__top">
+			<a href="{% url "tenders" %}" class="opportunity__nav active">{% trans "Tenders" %} </a>
+			<a href="{% url "vacancies" %}" class="opportunity__nav">{% trans "Vacancies" %} </a>
+		</div>
+		<div class="opportunity__main">
+			<h1 class="opportunity__maintitle">{% trans "Tenders in Turkmenistan" %} </h1>
+			<div class="opportunity__wrapper">
+				{% for tender in tenders %}
+				<a href='{% url "tender_detail" tender.slug %}' class="opportunity__item">
+					<div class="opportunity__title">{{ tender.title }}</div>
+					<div class="opportunity__text">{{ tender.text|truncatechars:250|safe }}</div>
+					<div class="opportunity__date">{{ tender.created_at|date:"d F Y" }}</div>
+				</a>
+				{% endfor %}
+
+				<div class="pagination">
+					{% if tenders.has_previous %}
+						<a class='pagination__prev' href="?page={{ tenders.previous_page_number }}">{% trans "« Previous" %}</a>
+					{% endif %}
+
+					{% for num in tenders.paginator.page_range %}
+						{% if tenders.number == num %}
+						<div class='pagination__num pagination__thisnum'>{{ num }}</div>
+						{% else %}
+						<a class='pagination__num' href="?page={{ num }}">{{ num }}</a>
+						{% endif %}
+					{% endfor %}
+
+					{% if tenders.has_next %}
+						<a class='pagination__next' href="?page={{tenders.next_page_number }}">{% trans "Next »" %}</a>
+					{% endif %}
+				</div>
+			</div>
+		
+			
+		</div>
+
+		
+	</div>
+	<div class="opportunity__extra">
+		<div class="container">
+			<div class="extra__text">
+			{% blocktrans %}
+			Welcome to the Tenders Section of Turkmenistan. Here you will find current tenders in Ashgabat and other regions of the country. We publish information about public and private procurement, competitions, and bidding to help businesses and entrepreneurs find profitable contracts. <br> <br>
+
+			Our catalog of tenders in Turkmenistan is updated daily.<br> <br>
+
+			Looking for tenders in Ashgabat? We have collected the latest offers from government organizations, large corporations, and private companies. Submit your application directly on the website and participate in the competition.
+			{% endblocktrans %}
+			</div>
+
+		</div>
 	</div>
 </section>
 

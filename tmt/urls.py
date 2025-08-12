@@ -17,6 +17,10 @@ from .sitemaps import (
     ProjectImageI18nSitemap,
     BlogI18nSitemap,
     NewsI18nSitemap,
+    TenderI18nSitemap,
+    TenderListI18nSitemap,
+    VacancyI18nSitemap,
+    VacancyListI18nSitemap,
     LANGUAGES
 )
 
@@ -27,6 +31,13 @@ for lang in LANGUAGES:
     sitemaps[f'projects-{lang}'] = ProjectImageI18nSitemap(lang)
     sitemaps[f'blogs-{lang}'] = BlogI18nSitemap(lang)
     sitemaps[f'news-{lang}'] = NewsI18nSitemap(lang)
+    # Вакансии
+    sitemaps[f'vacancies-list-{lang}'] = VacancyListI18nSitemap(lang)
+    sitemaps[f'vacancies-{lang}'] = VacancyI18nSitemap(lang)
+
+    # Тендеры
+    sitemaps[f'tenders-list-{lang}'] = TenderListI18nSitemap(lang)
+    sitemaps[f'tenders-{lang}'] = TenderI18nSitemap(lang)
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),

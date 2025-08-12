@@ -1,0 +1,88 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Job Vacancies in Turkmenistan - Employment in Ashgabat | TMT Consulting Group" %}{% endblock title %}
+
+{% block meta %}
+<meta name="description" content="{% trans "Latest Job Vacancies in Turkmenistan & Ashgabat. Find jobs across various sectors: IT, construction, trade, healthcare. Daily updates." %}">
+{% endblock meta %}
+
+{% block extracss %}
+<link rel="stylesheet" type="text/css" href="{% static 'opportunity/css/opportunity.css' %}">
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<section class="opportunity">
+	<div class="container">
+		<div class="opportunity__top">
+			<a href="{% url "tenders" %}" class="opportunity__nav ">{% trans "Tenders" %} </a>
+			<a href="{% url "vacancies" %}" class="opportunity__nav active">{% trans "Vacancies" %} </a>
+		</div>
+		<div class="opportunity__main">
+		<h1 class="opportunity__maintitle">{% trans "Job Vacancies in Turkmenistan" %} </h1>
+		<div class="opportunity__wrapper">
+			{% if vacancies %}
+				{% for vacancy in vacancies %}
+				<a href='{% url "vacancy_detail" vacancy.slug %}' class="opportunity__item">
+					<div class="opportunity__title">{{ vacancy.title }}</div>
+					<div class="opportunity__text">{{ vacancy.text|safe|truncatechars:250 }}</div>
+					<div class="opportunity__date">{{ vacancy.created_at|date:"d F Y" }}</div>
+				</a>
+				{% endfor %}
+			{% else %}
+				<div class="vacancies__none">{% trans "There are no vacancies at the moment" %}</div>
+			{% endif %}
+			
+
+			<div class="pagination">
+			{% if vacancies.has_previous %}
+				<a class='pagination__prev' href="?page={{ vacancies.previous_page_number }}"> {% trans "« Previous" %}</a>
+			{% endif %}
+
+			{% for num in vacancies.paginator.page_range %}
+				{% if vacancies.number == num %}
+				<strong class='pagination__num pagination__thisnum'>{{ num }}</strong>
+				{% else %}
+				<a class='pagination__num' href="?page={{ num }}">{{ num }}</a>
+				{% endif %}
+			{% endfor %}
+
+			{% if vacancies.has_next %}
+				<a class='pagination__next' href="?page={{vacancies.next_page_number }}">{% trans "Next »" %} </a>
+			{% endif %}
+			</div>
+		</div>
+		
+			
+		</div>
+	</div>
+
+	<div class="opportunity__extra">
+		<div class="container">
+			<div class="extra__text">
+			{% blocktrans %}
+			Looking for a job in Turkmenistan? This page features current job vacancies in Ashgabat and other cities across the country. Here you’ll find offers from government organizations, international companies, and private employers in various fields—from IT and construction to trade, healthcare, and education. <br> <br>
+
+			We update the list of job vacancies in Turkmenistan daily so you can be among the first to discover new opportunities. <br> <br>
+
+			If you’re interested in jobs in Ashgabat, you’ll find everything from entry-level positions for beginners to high-paying roles for experienced professionals. We work directly with employers, ensuring up-to-date information and a quick response to your application. <br> <br>
+
+			Start your job search in Turkmenistan today—submit your CV and take the first step toward a new career!
+			{% endblocktrans %}
+		</div>
+
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+
+{% block extrajs %}{% endblock %}

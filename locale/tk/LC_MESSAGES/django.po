@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-04 12:56+0500\n"
-"PO-Revision-Date: 2025-08-04 12:57+0500\n"
+"POT-Creation-Date: 2025-08-12 11:17+0500\n"
+"PO-Revision-Date: 2025-08-12 11:17+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tk\n"
@@ -29,7 +29,6 @@ msgstr "Biz barada"
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\main\templates\main\base.html:10 .\main\templates\main\main.html:5
 #: .\main\templates\main\news_detail.html:6
-#: .\main\templates\main\news_list.html:6
 msgid "TMT Consulting Group"
 msgstr "TMT Consulting Group"
 
@@ -116,7 +115,6 @@ msgstr "Baş sahypa"
 
 #: .\main\templates\main\base.html:41 .\main\templates\main\main.html:164
 #: .\main\templates\main\news_list.html:6
-#: .\main\templates\main\news_list.html:25
 msgid "News"
 msgstr "Täzelikler"
 
@@ -226,18 +224,171 @@ msgstr "Täzeliklere"
 msgid "Latest News"
 msgstr "Soňky täzelikler"
 
+#: .\main\templates\main\news_list.html:6
+msgid ""
+"Turkmenistan News — Latest Events and Current News of the Country | TMT "
+"Consulting Group"
+msgstr ""
+"Türkmenistan Habarlary — Ýurduň iň soňky wakalary we häzirki wakalar | TMT "
+"Consulting Group"
+
 #: .\main\templates\main\news_list.html:9
-msgid "TMT Consulting Group News"
-msgstr "TMT Consulting Group Täzelikler"
+msgid ""
+"Read the latest news from Turkmenistan. Fresh events, politics, economy, "
+"sports, and culture. Stay up to date with all the current news of the "
+"country."
+msgstr ""
+"Türkmenistanyň täze habarlaryny okaň. Täze wakalar, syýasy ýagdaýlar, "
+"ykdysadyýet, sport we medeniýet. Ýurduň ähli häzirki habarlary bilen habarly "
+"boluň."
+
+#: .\main\templates\main\news_list.html:25
+msgid "Turkmenistan News"
+msgstr "Türkmenistan Habarlary"
+
+#: .\opportunity\templates\opportunity\opportunity.html:7
+msgid "Tenders in Turkmenistan — Current Procurement | TMT Consulting Group"
+msgstr ""
+"Türkmenistanda tenderler — Häzirki satyn almalar | TMT Consulting Group"
+
+#: .\opportunity\templates\opportunity\opportunity.html:10
+msgid ""
+"Current tenders in Turkmenistan and Ashgabat. Information about procurement, "
+"competitions, and bidding. Find tenders and apply online."
+msgstr ""
+"Türkmenistanda we Aşgabatdaky häzirki tenderler. Satyn almalary, bäsleşikler "
+"we söwdalar baradaky maglumatlar. Tenderleri tapyň we onlaýn görnüşde arza "
+"beriň."
+
+#: .\opportunity\templates\opportunity\opportunity.html:25
+#: .\opportunity\templates\opportunity\vacancies.html:25
+msgid "Tenders"
+msgstr "Bäsleşikler"
+
+#: .\opportunity\templates\opportunity\opportunity.html:26
+#: .\opportunity\templates\opportunity\vacancies.html:26
+msgid "Vacancies"
+msgstr "Iş orunlary"
+
+#: .\opportunity\templates\opportunity\opportunity.html:29
+msgid "Tenders in Turkmenistan"
+msgstr "Türkmenistanyň tenderleri"
+
+#: .\opportunity\templates\opportunity\opportunity.html:41
+#: .\opportunity\templates\opportunity\vacancies.html:46
+msgid "« Previous"
+msgstr "« Öňki"
+
+#: .\opportunity\templates\opportunity\opportunity.html:53
+#: .\opportunity\templates\opportunity\vacancies.html:58
+msgid "Next »"
+msgstr "Indiki »"
+
+#: .\opportunity\templates\opportunity\opportunity.html:66
+msgid ""
+"\n"
+"\t\t\tWelcome to the Tenders Section of Turkmenistan. Here you will find "
+"current tenders in Ashgabat and other regions of the country. We publish "
+"information about public and private procurement, competitions, and bidding "
+"to help businesses and entrepreneurs find profitable contracts. <br> <br>\n"
+"\n"
+"\t\t\tOur catalog of tenders in Turkmenistan is updated daily.<br> <br>\n"
+"\n"
+"\t\t\tLooking for tenders in Ashgabat? We have collected the latest offers "
+"from government organizations, large corporations, and private companies. "
+"Submit your application directly on the website and participate in the "
+"competition.\n"
+"\t\t\t"
+msgstr ""
+"\t\t\tTürkmenistanyň tenderler bölümini hoş geldiňiz. Bu ýerden siz "
+"Aşgabadyň we ýurduň beýleki sebitleriniň häzirki tenderlerini taparsyňyz. "
+"Biz döwlet we hususy satyn almalary, bäsleşikler we söwdalar baradaky "
+"maglumatlary çap edýäris, bu bolsa kärhanalara we telekeçilere girdejili "
+"şertnamalary tapmaga kömek edýär. <br> <br>\n"
+"\n"
+"\t\t\tTürkmenistandaky tenderler katalogymyz her gün täzelenýär. <br> <br>\n"
+"\n"
+"\t\t\tAşgabadyň tenderlerini gözleýärsiňizmi? Biz döwlet guramalaryndan, iri "
+"korporasiýalardan we hususy kompaniýalardan iň soňky teklipleri jemledik. "
+"Arzany göni web sahypasynda beriň we bäsleşige gatnaşyň."
+
+#: .\opportunity\templates\opportunity\tenders_detail.html:24
+#: .\opportunity\templates\opportunity\vacancies_detail.html:24
+msgid "All tenders"
+msgstr "Ähli tenderler"
+
+#: .\opportunity\templates\opportunity\vacancies.html:7
+msgid ""
+"Job Vacancies in Turkmenistan - Employment in Ashgabat | TMT Consulting Group"
+msgstr ""
+"Türkmenistandaky Iş Orunlary — Aşgabatda Iş Tapmak | TMT Consulting Group"
+
+#: .\opportunity\templates\opportunity\vacancies.html:10
+msgid ""
+"Latest Job Vacancies in Turkmenistan & Ashgabat. Find jobs across various "
+"sectors: IT, construction, trade, healthcare. Daily updates."
+msgstr ""
+"Türkmenistan we Aşgabatdaky Iň Täze Iş Orunlary. IT, gurluşyk, söwda, "
+"saglygy goraýyş ýaly dürli ugurlar boýunça iş tapyň. Günde täzelenýär."
+
+#: .\opportunity\templates\opportunity\vacancies.html:29
+msgid "Job Vacancies in Turkmenistan"
+msgstr "Türkmenistandaky Iş Orunlary"
+
+#: .\opportunity\templates\opportunity\vacancies.html:40
+msgid "There are no vacancies at the moment"
+msgstr "Häzirki wagtda iş ýerleri ýok"
+
+#: .\opportunity\templates\opportunity\vacancies.html:70
+msgid ""
+"\n"
+"\t\t\tLooking for a job in Turkmenistan? This page features current job "
+"vacancies in Ashgabat and other cities across the country. Here you’ll find "
+"offers from government organizations, international companies, and private "
+"employers in various fields—from IT and construction to trade, healthcare, "
+"and education. <br> <br>\n"
+"\n"
+"\t\t\tWe update the list of job vacancies in Turkmenistan daily so you can "
+"be among the first to discover new opportunities. <br> <br>\n"
+"\n"
+"\t\t\tIf you’re interested in jobs in Ashgabat, you’ll find everything from "
+"entry-level positions for beginners to high-paying roles for experienced "
+"professionals. We work directly with employers, ensuring up-to-date "
+"information and a quick response to your application. <br> <br>\n"
+"\n"
+"\t\t\tStart your job search in Turkmenistan today—submit your CV and take "
+"the first step toward a new career!\n"
+"\t\t\t"
+msgstr ""
+"Türkmenistanda iş gözleýärsiňizmi? Bu sahypada Aşgabadyň we ýurduň beýleki "
+"şäherleriniň häzirki iş orunlaryny taparsyňyz. Bu ýerde hökümet "
+"guramalaryndan, halkara kompaniýalardan we hususy iş berijilerden dürli "
+"ugurlardaky — IT, gurluşyk, söwda, saglygy goraýyş we bilim ýaly — teklipler "
+"jemlenendir. <br><br>\n"
+"\n"
+"\t\t\tBiz Türkmenistandaky iş orunlarynyň sanawyny her gün täzeläp durýarys, "
+"şonuň üçin täze mümkinçilikleri ilkinji bolup gözläp bilersiňiz. <br><br>\n"
+"\n"
+"\t\t\tAşgabadyň işlerine gyzyklanýan bolsaňyz, başlamak üçin amatly "
+"başlangyç orunlaryndan başlap, tejribeli hünärmenler üçin ýokary tölegli "
+"wezipelere çenli hemmesini taparsyňyz. Biz iş berijiler bilen gönüden-göni "
+"işleýäris, bu hem maglumatlaryň häzirki wagtda bolmagyny we arzanyňyza çalt "
+"jogap berilmegini üpjün edýär. <br><br>\n"
+"\n"
+"\t\t\tTürkmenistanda iş gözlegiňize häzirden başlaň — rezýumeňizi iberiň we "
+"täze karýeranyň ilkinji ädimini ädiniň!"
 
 #: .\tmt\settings.py:19
 msgid "English"
-msgstr ""
+msgstr "Iňlis dili"
 
 #: .\tmt\settings.py:20
 msgid "Russian"
-msgstr ""
+msgstr "Rus dili"
 
 #: .\tmt\settings.py:21
 msgid "Turkmen"
-msgstr ""
+msgstr "Turkmen dili"
+
+#~ msgid "TMT Consulting Group News"
+#~ msgstr "TMT Consulting Group Täzelikler"

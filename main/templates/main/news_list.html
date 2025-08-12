@@ -3,10 +3,10 @@
 {% load i18n %}
 {% load custom_filters %}
 
-{% block title %}{% trans "News" %} | {% trans "TMT Consulting Group" %}{% endblock %}
+{% block title %}{% trans "News" %} | {% trans "Turkmenistan News — Latest Events and Current News of the Country | TMT Consulting Group" %}{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="{% trans "TMT Consulting Group News" %}">
+    <meta name="description" content="{% trans "Read the latest news from Turkmenistan. Fresh events, politics, economy, sports, and culture. Stay up to date with all the current news of the country." %}">
 {% endblock %}
 
 
@@ -22,7 +22,7 @@
 
 <section class="news">
 	<div class="container">
-		<h3 class="news__headTitle title" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">{% trans 'News' %}</h3>
+		<h3 class="news__headTitle title" data-aos='fade-right' data-aos-duration="500" data-aos-anchor-placement="top-center">{% trans 'Turkmenistan News' %}</h3>
 		<div class="news__wrapper">
 			{% for item in page_obj %}
 			<a href="{% url 'news_detail' item.slug %}" class="news__link" >
