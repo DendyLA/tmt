@@ -1,3 +1,9 @@
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .title{
 	font-family: 'Open sans';
 	font-style: normal;
@@ -8,6 +14,7 @@
 /*Плохо*/
 html{
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 body{
 	background-image: linear-gradient(-5deg,#f8f4f1 60%,#fefeff 98%);
@@ -28,6 +35,27 @@ body{
 	top: 0; 
 	transition: all 0.3s ease-in-out;
 }
+
+
+
+.event__btn{
+	position: absolute;
+	top: 27%;
+	right: 180px;
+	background-color: #97c680;
+	border-radius: 12px;
+	padding: .5rem;
+	width: 180px;
+	border: none;
+	cursor: pointer;
+	transition: all .4s;
+	
+}
+
+.event__btn:hover{
+	background-color: #feba88;
+}
+
 .header--fixed {
     position: fixed;
     top: -100px; /* сначала прячем */
@@ -319,6 +347,13 @@ body{
 	.footer{
 		padding: 10px 0;
 	}
+	.event__btn{
+		position: relative;
+		top: -50%;
+		right: -34vw;
+		font-size: .8rem;
+		width: 130px;
+	}
 }
 
 
@@ -359,15 +394,40 @@ body{
 		width: 50px;
 		height: 50px;
 	}
+	.event__btn{
+		position: relative;
+		top: -60%;
+		right: -37vw;
+	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
+	
+	.event__btn{
+		position: relative;
+		top: -19px;
+		right: -68vw;
+	}
 
 	.footer__wrapper{
 		flex-wrap: wrap;	
 	}
 	.footer__right{
 		margin-top: 20px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1699px) {
+	.event__btn{
+		position: relative;
+		top: -20px;
+		right: -79vw;
+	}
+}
+
+@media (min-width: 1700px) and (max-width: 2008px) {
+	.event__btn{
+		right: 16px;
 	}
 }
 

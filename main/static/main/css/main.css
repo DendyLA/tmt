@@ -1,5 +1,93 @@
 
 
+.circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background:  #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  transition: all .4s;
+  cursor: pointer;
+  animation: pulse 1.2s infinite;
+  z-index: 10000;
+}
+
+.count{
+	background-color: rgb(212, 71, 71);
+	padding: .2rem .6rem;
+	border-radius: 100px;
+	font-size: 1rem;
+	position: absolute;
+	top: -10px;
+	right: 5px;
+	z-index: 2;
+	transition: all .4s;
+}
+/* буква всегда сверху */
+.text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.circle:hover{
+	background:  rgb(212, 71, 71);
+	animation-play-state: paused;
+}
+
+.circle:hover .count{
+	background:  #2196f3;
+}
+
+
+.event{
+	background-image: linear-gradient(-5deg,#f8f4f1 60%,#fefeff 98%);
+	z-index: 10000;
+	position: fixed;
+	bottom: 12%;
+	right: 2%;
+	width: 300px;
+	border: 1px solid #1A1A1A;
+	border-radius: 10px;
+	padding: .5rem;
+	opacity: 0;
+	transition: all .4s;
+	font-family: 'Open sans';
+}
+
+.event__img{
+	border-radius: 10px;
+}
+
+.event__title{
+	font-size: 1rem;
+}
+
+.event__date{
+	font-size: .9rem;
+}
+
+.event__link{
+	font-size: 1rem;
+	text-decoration: underline;
+}
+
+.event.active{
+	opacity: 1;
+}
+
+
+
+/* main */
 .main{
 	padding: 20px 0;
 }
@@ -1001,6 +1089,7 @@
   
 /* 📱 Мобильные устройства: ландшафт или большие телефоны (768px – 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+	
 	.main__left{
 		display: none;
 	}

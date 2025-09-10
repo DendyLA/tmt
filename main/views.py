@@ -9,6 +9,8 @@ from .forms import SubscribeForm
 
 from .models import Slider, Slogan, Services, News, Feedbacks, Partners, Video, Info
 
+from event.models import Event
+
 def main(request):
     slides = Slider.objects.all().order_by('created_at')
     slogans = Slogan.objects.all()
@@ -18,7 +20,8 @@ def main(request):
     partners = Partners.objects.order_by('created_at')
     video = Video.objects.last()
     infoVideo = Info.objects.last()
-    return render(request, 'main/main.html', {'slides' : slides, 'slogans': slogans, 'services' : services, 'latest_news': latest_news, 'feedbacks' : feedbacks, 'partners' : partners, 'video': video, 'infoVideo' : infoVideo})
+    event = Event.objects.last()
+    return render(request, 'main/main.html', {'slides' : slides, 'slogans': slogans, 'services' : services, 'latest_news': latest_news, 'feedbacks' : feedbacks, 'partners' : partners, 'video': video, 'infoVideo' : infoVideo, 'event' : event,})
 
 
 @require_POST  # Разрешаем только POST-запросы

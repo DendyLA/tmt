@@ -15,7 +15,25 @@
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
 {% endblock %}
 
+
+
 {% block content %}
+
+{% if event %}
+	<div class="circle">
+		<span class="text">i</span>
+		<div class="count">1</div>
+	</div>
+
+	<div class="event">
+		<img src="{{ event.image.url }}" alt="Event_photo" class="event__img">
+		<h4 class="event__title">{{ event.title }}</h4>
+		<div class="event__date">{{ event.event_date|date:'d M Y' }}</div>
+		<a href="{{ event.get_absolute_url }}" class="event__link">Узнать подробнее</a>
+	</div>
+{% endif %}
+
+
 <section class="main">
 	<div class="container">
 		<div class="main__wrapper">

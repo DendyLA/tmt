@@ -63,7 +63,7 @@ ALLOWED_HOSTS = [ ]
 # Application definition
 
 INSTALLED_APPS = [
-	'django_cleanup',
+	'django_cleanup.apps.CleanupConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,7 +80,8 @@ INSTALLED_APPS = [
 	'blog',
 	'about',
 	'contacts',
-	'opportunity'
+	'opportunity',
+	'event',
 ]
 
 
@@ -109,7 +110,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 				'django.template.context_processors.i18n',
-
+                "tmt.context_processors.event_url",
             ],
         },
     },
@@ -151,13 +152,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)

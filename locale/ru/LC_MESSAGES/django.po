@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 11:17+0500\n"
-"PO-Revision-Date: 2025-08-12 11:18+0500\n"
+"POT-Creation-Date: 2025-09-05 17:53+0500\n"
+"PO-Revision-Date: 2025-09-05 17:59+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #: .\about\templates\about\about.html:8 .\main\templates\main\base.html:44
-#: .\main\templates\main\base.html:90 .\main\templates\main\main.html:125
+#: .\main\templates\main\base.html:96 .\main\templates\main\main.html:144
 msgid "About us"
 msgstr "О нас"
 
@@ -52,7 +52,7 @@ msgid "Services"
 msgstr "Услуги"
 
 #: .\about\templates\about\about.html:40 .\about\templates\about\gallery.html:7
-#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:112
+#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:131
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -65,7 +65,7 @@ msgid "Contact us"
 msgstr "Связаться"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
-#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:91
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:97
 msgid "Blog"
 msgstr "Блог"
 
@@ -75,7 +75,8 @@ msgstr "Блог о конференциях и форумах"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:92
+#: .\event\templates\event\event_detail.html:91
+#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:98
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -111,11 +112,36 @@ msgstr "Отправить"
 msgid "Thank You for your message!"
 msgstr "Спасибо что связались с нами"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:89
+#: .\event\templates\event\event_detail.html:22
+msgid "Join the Meetings"
+msgstr "Участвовать во встречах"
+
+#: .\event\templates\event\event_detail.html:31
+msgid "About forum"
+msgstr "О нас"
+
+#: .\event\templates\event\event_detail.html:43
+msgid "Key Areas"
+msgstr "Основные направления"
+
+#: .\event\templates\event\event_detail.html:59
+msgid "We Assist in Organizing"
+msgstr "Мы помогаем организовать"
+
+#: .\event\templates\event\event_detail.html:70
+#: .\event\templates\event\event_detail.html:81
+msgid "Submit Application"
+msgstr "Подать заявку"
+
+#: .\event\templates\event\event_detail.html:93
+msgid "For those interested, please reach out by email:"
+msgstr "Заинтересованным обращатся по email:"
+
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:95
 msgid "Home"
 msgstr "Главная"
 
-#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:164
+#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:183
 #: .\main\templates\main\news_list.html:6
 msgid "News"
 msgstr "Новости"
@@ -124,11 +150,15 @@ msgstr "Новости"
 msgid "Opportunities"
 msgstr "Возможности"
 
-#: .\main\templates\main\base.html:104
+#: .\main\templates\main\base.html:73
+msgid "New Event"
+msgstr "Новое мероприятие"
+
+#: .\main\templates\main\base.html:110
 msgid "Join our community"
 msgstr "Присоединяй к нам"
 
-#: .\main\templates\main\base.html:110
+#: .\main\templates\main\base.html:116
 msgid "All rights reserved"
 msgstr "Все права защищены"
 
@@ -136,23 +166,23 @@ msgstr "Все права защищены"
 msgid "Main "
 msgstr "Главная"
 
-#: .\main\templates\main\main.html:41
+#: .\main\templates\main\main.html:60
 msgid "Read more"
 msgstr "Подробнее"
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "Let's create"
 msgstr "Давайте создадим"
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "a project everyone"
 msgstr "проект о котором"
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "will be talking about"
 msgstr "будут говорить"
 
-#: .\main\templates\main\main.html:60
+#: .\main\templates\main\main.html:79
 msgid ""
 "In collaboration with us are leading global organizations, major companies, "
 "and investors. Join the community of the future."
@@ -160,59 +190,59 @@ msgstr ""
 "В сотрудничестве с нами ведущие мировые организации, крупные компании, "
 "инвесторы. Присоединяйся к сообществу будущего."
 
-#: .\main\templates\main\main.html:70
+#: .\main\templates\main\main.html:89
 msgid "Conferences"
 msgstr "Конференции"
 
-#: .\main\templates\main\main.html:71
+#: .\main\templates\main\main.html:90
 msgid "Organize a conference that inspires and unites."
 msgstr "Организуй конференцию, которая вдохновляет и объединяет"
 
-#: .\main\templates\main\main.html:80
+#: .\main\templates\main\main.html:99
 msgid "Exhibitions"
 msgstr "Выставки"
 
-#: .\main\templates\main\main.html:81
+#: .\main\templates\main\main.html:100
 msgid "Don’t miss the chance to showcase innovations and attract partners"
 msgstr "Не упусти шанс показать инновации и привлечь партнеров."
 
-#: .\main\templates\main\main.html:90
+#: .\main\templates\main\main.html:109
 msgid "Virtual offices"
 msgstr "Виртуальные офисы"
 
-#: .\main\templates\main\main.html:91
+#: .\main\templates\main\main.html:110
 msgid "We ensure accessibility, convenience, and full business productivity"
 msgstr "Обеспечим доступность, удобство и полную продуктивность бизнеса. "
 
-#: .\main\templates\main\main.html:135
+#: .\main\templates\main\main.html:154
 msgid "More"
 msgstr "Подробнее"
 
-#: .\main\templates\main\main.html:146
+#: .\main\templates\main\main.html:165
 msgid "Our Services"
 msgstr "Наши Услуги"
 
-#: .\main\templates\main\main.html:175 .\main\templates\main\news_list.html:36
+#: .\main\templates\main\main.html:194 .\main\templates\main\news_list.html:36
 msgid "Read more..."
 msgstr "Подробнее..."
 
-#: .\main\templates\main\main.html:181
+#: .\main\templates\main\main.html:200
 msgid "All news"
 msgstr "Все Новости"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "Moments"
 msgstr "Моменты"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "from our"
 msgstr "из наших"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "events"
 msgstr "Мероприятий"
 
-#: .\main\templates\main\main.html:211
+#: .\main\templates\main\main.html:230
 msgid "Our Partners"
 msgstr "Наши партнёры"
 

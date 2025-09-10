@@ -81,3 +81,11 @@ document.querySelectorAll('.slider__item').forEach(item => {
 });
 
 
+
+circle = document.querySelector('.circle');
+eventInfo = document.querySelector('.event')
+
+circle.addEventListener('click', (e) => {
+	eventInfo.classList.toggle('active')
+
+})

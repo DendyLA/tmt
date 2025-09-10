@@ -40,7 +40,7 @@
 	font-weight: 300;
 }
 
-.opportunity__wrapper{
+.opportunity__wrapper{   
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;

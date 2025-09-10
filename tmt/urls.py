@@ -10,7 +10,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from main.views import main, subscribe, news_list, news_detail
 from blog.views import blog, blog_detail
 from contacts.views import contact
-
+from event.views import eventDetail
 
 from .sitemaps import (
     StaticViewI18nSitemap,
@@ -21,6 +21,7 @@ from .sitemaps import (
     TenderListI18nSitemap,
     VacancyI18nSitemap,
     VacancyListI18nSitemap,
+    EventI18nSitemap,
     LANGUAGES
 )
 
@@ -38,6 +39,7 @@ for lang in LANGUAGES:
     # Тендеры
     sitemaps[f'tenders-list-{lang}'] = TenderListI18nSitemap(lang)
     sitemaps[f'tenders-{lang}'] = TenderI18nSitemap(lang)
+    sitemaps[f'events-{lang}'] = EventI18nSitemap(lang)
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
@@ -57,7 +59,8 @@ urlpatterns += i18n_patterns(
     path('blog/<slug:slug>/', blog_detail, name='blog_detail'),
     path('about/', include('about.urls')),
     path('contact/', contact, name='contact'),
-    path('opportunities/', include('opportunity.urls'))
+    path('opportunities/', include('opportunity.urls')),
+    path('event/<slug:slug>', eventDetail, name='event_detail')
 )
 
 # Обработка медиафайлов в режиме DEBUG

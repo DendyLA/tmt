@@ -69,10 +69,16 @@
                 </div>
             </div>
         </div>
+        
+        <a href="{{ event_url }}"><button class="event__btn">{% trans "New Event" %}</button></a>
+
     </header>
     
 
+
+
     <main class="main">
+
         {% block content %}{% endblock %}
     </main>
 	

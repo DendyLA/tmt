@@ -6,6 +6,7 @@ from about.models import ProjectImage
 from blog.models import Blog
 from main.models import News
 from opportunity.models import Tenders, Vacancies
+from event.models import Event
 
 LANGUAGES = ['en', 'ru', 'tk']
 
@@ -128,3 +129,18 @@ class TenderI18nSitemap(Sitemap):
     def location(self, obj):
         with override(self.lang):
             return reverse("tender_detail", args=[obj.slug])
+        
+
+class EventI18nSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.7
+
+    def __init__(self, lang):
+        self.lang = lang
+
+    def items(self):
+        return Event.objects.all()
+
+    def location(self, obj):
+        with override(self.lang):
+            return f"/{self.lang}{obj.get_absolute_url()}"

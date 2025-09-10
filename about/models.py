@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from PIL import Image
 from io import BytesIO
@@ -55,29 +56,19 @@ class ProjectImage(models.Model):
     caption = models.CharField(max_length=255, null=True, verbose_name='Подпись к изображению alt и Slug для ссылок')
 
     def save(self, *args, **kwargs):
-
-
-
-
         if self.image:
             img = Image.open(self.image)
 
-            # Преобразование в RGB
-            if img.mode != 'RGB':
+            if img.mode in ('RGBA', "P"):
                 img = img.convert('RGB')
 
-            quality = 85
             output = BytesIO()
-            img.save(output, format='JPEG', quality=quality, optimize=True)
-
-            # Сжимаем до тех пор, пока не станет < 2MB или качество не опустится до 30
-            while output.tell() > 2 * 1024 * 1024 and quality > 30:
-                quality -= 5
-                output = BytesIO()
-                img.save(output, format='JPEG', quality=quality, optimize=True)
+            img.save(output, format='JPEG', quality=70)
 
             output.seek(0)
-            self.image = ContentFile(output.read(), self.image.name)
+
+            self.image = ContentFile(output.read(), os.path.basename(self.image.name))
+
             
 
         super().save(*args, **kwargs)
@@ -103,22 +94,15 @@ class AboutServices(TranslatableModel):
         if self.image:
             img = Image.open(self.image)
 
-            # Преобразование в RGB
-            if img.mode != 'RGB':
+            if img.mode in ('RGBA', "P"):
                 img = img.convert('RGB')
 
-            quality = 85
             output = BytesIO()
-            img.save(output, format='JPEG', quality=quality, optimize=True)
-
-            # Сжимаем до тех пор, пока не станет < 2MB или качество не опустится до 30
-            while output.tell() > 2 * 1024 * 1024 and quality > 30:
-                quality -= 5
-                output = BytesIO()
-                img.save(output, format='JPEG', quality=quality, optimize=True)
+            img.save(output, format='JPEG', quality=70)
 
             output.seek(0)
-            self.image = ContentFile(output.read(), self.image.name)
+
+            self.image = ContentFile(output.read(), os.path.basename(self.image.name))
 
         super().save(*args, **kwargs)
 

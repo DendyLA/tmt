@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 11:17+0500\n"
+"POT-Creation-Date: 2025-09-05 17:53+0500\n"
 "PO-Revision-Date: 2025-08-12 11:17+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #: .\about\templates\about\about.html:8 .\main\templates\main\base.html:44
-#: .\main\templates\main\base.html:90 .\main\templates\main\main.html:125
+#: .\main\templates\main\base.html:96 .\main\templates\main\main.html:144
 msgid "About us"
 msgstr "Biz barada"
 
@@ -50,7 +50,7 @@ msgid "Services"
 msgstr "Hyzmatlarymyz"
 
 #: .\about\templates\about\about.html:40 .\about\templates\about\gallery.html:7
-#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:112
+#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:131
 msgid "Gallery"
 msgstr "Galereýa"
 
@@ -63,7 +63,7 @@ msgid "Contact us"
 msgstr "Habarlaşmak"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
-#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:91
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:97
 msgid "Blog"
 msgstr "Blog"
 
@@ -73,7 +73,8 @@ msgstr "Konferensiýalar we forumlar barada blog"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:92
+#: .\event\templates\event\event_detail.html:91
+#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:98
 msgid "Contacts"
 msgstr "Habarlaşmak üçin"
 
@@ -109,11 +110,38 @@ msgstr "Ugrat"
 msgid "Thank You for your message!"
 msgstr "Habarlaşanyňyz üçin sag boluň"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:89
+#: .\event\templates\event\event_detail.html:22
+msgid "Join the Meetings"
+msgstr ""
+
+#: .\event\templates\event\event_detail.html:31
+#, fuzzy
+#| msgid "About us"
+msgid "About forum"
+msgstr "Biz barada"
+
+#: .\event\templates\event\event_detail.html:43
+msgid "Key Areas"
+msgstr ""
+
+#: .\event\templates\event\event_detail.html:59
+msgid "We Assist in Organizing"
+msgstr ""
+
+#: .\event\templates\event\event_detail.html:70
+#: .\event\templates\event\event_detail.html:81
+msgid "Submit Application"
+msgstr ""
+
+#: .\event\templates\event\event_detail.html:93
+msgid "For those interested, please reach out by email:"
+msgstr ""
+
+#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:95
 msgid "Home"
 msgstr "Baş sahypa"
 
-#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:164
+#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:183
 #: .\main\templates\main\news_list.html:6
 msgid "News"
 msgstr "Täzelikler"
@@ -122,11 +150,17 @@ msgstr "Täzelikler"
 msgid "Opportunities"
 msgstr "Mümkinçilikler"
 
-#: .\main\templates\main\base.html:104
+#: .\main\templates\main\base.html:73
+#, fuzzy
+#| msgid "events"
+msgid "New Event"
+msgstr "pursatlarymyz"
+
+#: .\main\templates\main\base.html:110
 msgid "Join our community"
 msgstr "Bize ýazylyň"
 
-#: .\main\templates\main\base.html:110
+#: .\main\templates\main\base.html:116
 msgid "All rights reserved"
 msgstr "Ähli hukuklar goralan"
 
@@ -134,23 +168,23 @@ msgstr "Ähli hukuklar goralan"
 msgid "Main "
 msgstr "Baş sahypa"
 
-#: .\main\templates\main\main.html:41
+#: .\main\templates\main\main.html:60
 msgid "Read more"
 msgstr "Dowamyny oka"
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "Let's create"
 msgstr "Geliň,"
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "a project everyone"
 msgstr "hemmäni gyzyklandyrjak "
 
-#: .\main\templates\main\main.html:59
+#: .\main\templates\main\main.html:78
 msgid "will be talking about"
 msgstr "taslamasyny döredeliň"
 
-#: .\main\templates\main\main.html:60
+#: .\main\templates\main\main.html:79
 msgid ""
 "In collaboration with us are leading global organizations, major companies, "
 "and investors. Join the community of the future."
@@ -158,61 +192,61 @@ msgstr ""
 "Biz dünýäniň öňdebaryjy guramalary, iri kompaniýalary we maýadarlary bilen "
 "ysnyşykly hyzmatdaşlykda. Geljegiň jemgyýetine goşulyň."
 
-#: .\main\templates\main\main.html:70
+#: .\main\templates\main\main.html:89
 msgid "Conferences"
 msgstr "Konferensiýalar"
 
-#: .\main\templates\main\main.html:71
+#: .\main\templates\main\main.html:90
 msgid "Organize a conference that inspires and unites."
 msgstr "Ylham berýän we birleşdirýän konferensiýa guraň."
 
-#: .\main\templates\main\main.html:80
+#: .\main\templates\main\main.html:99
 msgid "Exhibitions"
 msgstr "Sergiler"
 
-#: .\main\templates\main\main.html:81
+#: .\main\templates\main\main.html:100
 msgid "Don’t miss the chance to showcase innovations and attract partners"
 msgstr ""
 "Innowasion işleri görkezmek we hyzmatdaşlary çekmek mümkinçiligini elden "
 "gidirmäň. "
 
-#: .\main\templates\main\main.html:90
+#: .\main\templates\main\main.html:109
 msgid "Virtual offices"
 msgstr "Wirtual ofislar"
 
-#: .\main\templates\main\main.html:91
+#: .\main\templates\main\main.html:110
 msgid "We ensure accessibility, convenience, and full business productivity"
 msgstr "Elýeterliligi, amatlylygy we doly iş öndürijiligini üpjün edýäris."
 
-#: .\main\templates\main\main.html:135
+#: .\main\templates\main\main.html:154
 msgid "More"
 msgstr "Dowam"
 
-#: .\main\templates\main\main.html:146
+#: .\main\templates\main\main.html:165
 msgid "Our Services"
 msgstr "Hyzmatlarymyz"
 
-#: .\main\templates\main\main.html:175 .\main\templates\main\news_list.html:36
+#: .\main\templates\main\main.html:194 .\main\templates\main\news_list.html:36
 msgid "Read more..."
 msgstr "Dowamyny oka..."
 
-#: .\main\templates\main\main.html:181
+#: .\main\templates\main\main.html:200
 msgid "All news"
 msgstr "Täzelikler"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "Moments"
 msgstr "Biziň"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "from our"
 msgstr "Ajaýyp"
 
-#: .\main\templates\main\main.html:188
+#: .\main\templates\main\main.html:207
 msgid "events"
 msgstr "pursatlarymyz"
 
-#: .\main\templates\main\main.html:211
+#: .\main\templates\main\main.html:230
 msgid "Our Partners"
 msgstr "Hyzmatdaşlarymyz"
 

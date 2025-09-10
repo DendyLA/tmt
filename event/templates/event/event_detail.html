@@ -1,0 +1,113 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{{ event.title }} | {% trans "TMT Consulting Group" %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="{{ event.text|prepare_meta }}">
+{% endblock %}
+
+
+{% block extracss %}<link rel="stylesheet" href="{% static 'event/css/event.css' %}" />{% endblock %}
+
+
+{% block content %}
+
+<section class="promo" style="background-image: url('{{ event.image.url }}');">
+	<div class="container">
+		<div class="promo__wrapper">
+			<div class="promo__content">
+				<h1 class="promo__title">{{ event.title }}</h1>
+				<div class="promo__date">{{ event.get_event_period }}</div>
+				<div class="promo__city">{{ event.city }}</div>
+				<a href="#event-contacts"><button class="promo__btn">{% trans "Join the Meetings" %}</button></a>
+			</div>	
+			
+		</div>
+	</div>
+</section>
+
+<section class="about">
+	<div class="container">
+		<h4 class="about__title title">{% trans "About forum" %}</h4>
+		<div class="about__content">
+			<div class="about__img">
+				<img src="{{ about.image.url }}" alt="about__image" >
+			</div>
+			<div class="about__decr">{{ about.text|safe }}</div>
+		</div>
+	</div>
+</section>
+
+<section class="direction">
+	<div class="container">
+		<div class="direction__title title">{% trans "Key Areas" %}</div>
+		<div class="direction__wrapper">
+			{% for d in direction %}
+			<div class="direction__item" style="background-image: url('{{ d.image.url }}');">
+				<div class="direction__descr">{{ d.name }}</div>
+			</div>
+			{% endfor %}
+			
+			
+		</div>
+	</div>
+</section>
+
+{% if b2b or b2g %}
+<section class="pack">
+	<div class="container">
+		<div class="pack__title title">{% trans "We Assist in Organizing" %}</div>
+		<div class="pack__content">
+			<div class="pack__item">
+				<div class="pack__wrapper">
+					<div class="pack__name">B2B</div>
+					<ol class="pack__list">
+						{% for b in b2b %}
+						<li class="pack__point">{{ b.name }}</li>
+						{% endfor %}
+					</ol>
+				</div>
+				<a href="#event-contacts" class="pack__button"><button>{% trans "Submit Application" %}</button></a>
+			</div>
+			<div class="pack__item">
+				<div class="pack__wrapper">
+					<div class="pack__name">B2G</div>
+					<ol class="pack__list">
+						{% for g in b2g %}
+						<li class="pack__point">{{ g.name }}</li>
+						{% endfor %}
+					</ol>
+				</div>
+				<a href="#event-contacts" class="pack__button"><button>{% trans "Submit Application" %}</button></a>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+
+<section class="contact" id="event-contacts">
+	<div class="container">
+		<div class="contact__title title"> {% trans "Contacts" %} </div>
+		<div class="contact__content">
+			<div class="contact__name">{% trans "For those interested, please reach out by email:" %} </div>
+			<div class="contact__info">
+				<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+				</svg>
+				<a href="mailto:edt2025@tmt.tm" class="contact__num">edt2025@tmt.tm</a>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+
+{% block extrajs %}
+<script src="{% static 'event/js/event.js' %}"></script>
+{% endblock %}
