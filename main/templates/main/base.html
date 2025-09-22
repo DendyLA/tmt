@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/reset.css' %}">
 
     <link rel="stylesheet" href="{% static 'main/css/aos.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/fancybox.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,10 +44,10 @@
                     <li>|</li>
                     <li class="nav__item nav__about"><a href="{% url "about" %}">{% trans "About us" %} </a></li>
                     <li class="nav__item"><a href="{% url "contact" %}">{% trans "Contacts" %}</a></li>
-
+                    {% comment %} <a href="{{ event_url }}"><button class="event__btn">TED 2025</button></a> {% endcomment %}
                     <form action="{% url 'set_language' %}" method="post" style="display: flex; gap: 10px; align-items: center; margin-left: 20px;">
                         {% csrf_token %}
-                        <input type="hidden" name="next" value="{{ request.path }}">
+                        <input type="hidden" name="next" value="{{ request.get_full_path }}">
 
                         <button type="submit" name="language" value="ru" style="background: none; border: none; padding: 0; ">
                             <img src="{% static 'main/img/ru.png' %}" alt="Русский" style="width: 32px; height: 20px; cursor: pointer; ">
@@ -60,6 +61,8 @@
                         </button>
                     </form>
                 </ul>
+                {% block extralogo %}{% endblock extralogo %}
+               
                 <div class="nav__mobile">
                     <button class="hamburger hamburger--elastic " type="button">
                         <span class="hamburger-box">
@@ -70,7 +73,7 @@
             </div>
         </div>
         
-        <a href="{{ event_url }}"><button class="event__btn">{% trans "New Event" %}</button></a>
+        
 
     </header>
     
@@ -123,6 +126,7 @@
     </footer>
     <!-- Дополнительные скрипты JavaScript -->
     <script src="{% static 'main/js/aos.js' %}"></script>
+    <script src="{% static 'main/js/fancybox.umd.js' %}"></script>
     <script src="{% static 'main/js/base.js' %}"></script>
 	{% block extrajs %}{% endblock %}
 </body>

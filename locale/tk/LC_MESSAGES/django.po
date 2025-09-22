@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-05 17:53+0500\n"
-"PO-Revision-Date: 2025-08-12 11:17+0500\n"
+"POT-Creation-Date: 2025-09-22 17:21+0500\n"
+"PO-Revision-Date: 2025-09-22 17:24+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tk\n"
@@ -19,14 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:44
-#: .\main\templates\main\base.html:96 .\main\templates\main\main.html:144
+#: .\about\templates\about\about.html:8 .\main\templates\main\base.html:45
+#: .\main\templates\main\base.html:100 .\main\templates\main\main.html:143
 msgid "About us"
 msgstr "Biz barada"
 
 #: .\about\templates\about\about.html:8 .\about\templates\about\gallery.html:7
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog_detail.html:5
 #: .\contacts\templates\contacts\contacts.html:6
+#: .\event\templates\event\event_detail.html:7
 #: .\main\templates\main\base.html:10 .\main\templates\main\main.html:5
 #: .\main\templates\main\news_detail.html:6
 msgid "TMT Consulting Group"
@@ -50,7 +51,7 @@ msgid "Services"
 msgstr "Hyzmatlarymyz"
 
 #: .\about\templates\about\about.html:40 .\about\templates\about\gallery.html:7
-#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:131
+#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:130
 msgid "Gallery"
 msgstr "Galereýa"
 
@@ -63,7 +64,7 @@ msgid "Contact us"
 msgstr "Habarlaşmak"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
-#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:97
+#: .\main\templates\main\base.html:41 .\main\templates\main\base.html:101
 msgid "Blog"
 msgstr "Blog"
 
@@ -73,8 +74,8 @@ msgstr "Konferensiýalar we forumlar barada blog"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\event\templates\event\event_detail.html:91
-#: .\main\templates\main\base.html:45 .\main\templates\main\base.html:98
+#: .\event\templates\event\event_detail.html:114
+#: .\main\templates\main\base.html:46 .\main\templates\main\base.html:102
 msgid "Contacts"
 msgstr "Habarlaşmak üçin"
 
@@ -110,57 +111,55 @@ msgstr "Ugrat"
 msgid "Thank You for your message!"
 msgstr "Habarlaşanyňyz üçin sag boluň"
 
-#: .\event\templates\event\event_detail.html:22
+#: .\event\templates\event\event_detail.html:30
 msgid "Join the Meetings"
-msgstr ""
+msgstr "Duşuşyklara gatnaşmak "
 
-#: .\event\templates\event\event_detail.html:31
-#, fuzzy
-#| msgid "About us"
+#: .\event\templates\event\event_detail.html:39
 msgid "About forum"
-msgstr "Biz barada"
+msgstr "Forum hakynda"
 
-#: .\event\templates\event\event_detail.html:43
+#: .\event\templates\event\event_detail.html:51
 msgid "Key Areas"
-msgstr ""
+msgstr "Esasy ugurlar:"
 
-#: .\event\templates\event\event_detail.html:59
-msgid "We Assist in Organizing"
-msgstr ""
+#: .\event\templates\event\event_detail.html:66
+msgid "Official support"
+msgstr "Resmi goldaw"
 
-#: .\event\templates\event\event_detail.html:70
-#: .\event\templates\event\event_detail.html:81
-msgid "Submit Application"
-msgstr ""
+#: .\event\templates\event\event_detail.html:82
+msgid "We Assist in Organizing:"
+msgstr "Biz aşakdakylary guramaga ýardam berýäris:"
 
 #: .\event\templates\event\event_detail.html:93
-msgid "For those interested, please reach out by email:"
-msgstr ""
+#: .\event\templates\event\event_detail.html:104
+msgid "Submit Application"
+msgstr "Arza tabşyrmak"
 
-#: .\main\templates\main\base.html:39 .\main\templates\main\base.html:95
+#: .\event\templates\event\event_detail.html:116
+msgid "For more information, contact us by e-mail:"
+msgstr ""
+"Giňişleýin maglumat almak üçin şu e-mail salgysy arkaly biziň bilen "
+"habarlaşyň"
+
+#: .\main\templates\main\base.html:40 .\main\templates\main\base.html:99
 msgid "Home"
 msgstr "Baş sahypa"
 
-#: .\main\templates\main\base.html:41 .\main\templates\main\main.html:183
+#: .\main\templates\main\base.html:42 .\main\templates\main\main.html:182
 #: .\main\templates\main\news_list.html:6
 msgid "News"
 msgstr "Täzelikler"
 
-#: .\main\templates\main\base.html:42
+#: .\main\templates\main\base.html:43
 msgid "Opportunities"
 msgstr "Mümkinçilikler"
 
-#: .\main\templates\main\base.html:73
-#, fuzzy
-#| msgid "events"
-msgid "New Event"
-msgstr "pursatlarymyz"
-
-#: .\main\templates\main\base.html:110
+#: .\main\templates\main\base.html:114
 msgid "Join our community"
 msgstr "Bize ýazylyň"
 
-#: .\main\templates\main\base.html:116
+#: .\main\templates\main\base.html:120
 msgid "All rights reserved"
 msgstr "Ähli hukuklar goralan"
 
@@ -168,23 +167,23 @@ msgstr "Ähli hukuklar goralan"
 msgid "Main "
 msgstr "Baş sahypa"
 
-#: .\main\templates\main\main.html:60
+#: .\main\templates\main\main.html:59
 msgid "Read more"
 msgstr "Dowamyny oka"
 
-#: .\main\templates\main\main.html:78
+#: .\main\templates\main\main.html:77
 msgid "Let's create"
 msgstr "Geliň,"
 
-#: .\main\templates\main\main.html:78
+#: .\main\templates\main\main.html:77
 msgid "a project everyone"
 msgstr "hemmäni gyzyklandyrjak "
 
-#: .\main\templates\main\main.html:78
+#: .\main\templates\main\main.html:77
 msgid "will be talking about"
 msgstr "taslamasyny döredeliň"
 
-#: .\main\templates\main\main.html:79
+#: .\main\templates\main\main.html:78
 msgid ""
 "In collaboration with us are leading global organizations, major companies, "
 "and investors. Join the community of the future."
@@ -192,61 +191,61 @@ msgstr ""
 "Biz dünýäniň öňdebaryjy guramalary, iri kompaniýalary we maýadarlary bilen "
 "ysnyşykly hyzmatdaşlykda. Geljegiň jemgyýetine goşulyň."
 
-#: .\main\templates\main\main.html:89
+#: .\main\templates\main\main.html:88
 msgid "Conferences"
 msgstr "Konferensiýalar"
 
-#: .\main\templates\main\main.html:90
+#: .\main\templates\main\main.html:89
 msgid "Organize a conference that inspires and unites."
 msgstr "Ylham berýän we birleşdirýän konferensiýa guraň."
 
-#: .\main\templates\main\main.html:99
+#: .\main\templates\main\main.html:98
 msgid "Exhibitions"
 msgstr "Sergiler"
 
-#: .\main\templates\main\main.html:100
+#: .\main\templates\main\main.html:99
 msgid "Don’t miss the chance to showcase innovations and attract partners"
 msgstr ""
 "Innowasion işleri görkezmek we hyzmatdaşlary çekmek mümkinçiligini elden "
 "gidirmäň. "
 
-#: .\main\templates\main\main.html:109
+#: .\main\templates\main\main.html:108
 msgid "Virtual offices"
 msgstr "Wirtual ofislar"
 
-#: .\main\templates\main\main.html:110
+#: .\main\templates\main\main.html:109
 msgid "We ensure accessibility, convenience, and full business productivity"
 msgstr "Elýeterliligi, amatlylygy we doly iş öndürijiligini üpjün edýäris."
 
-#: .\main\templates\main\main.html:154
+#: .\main\templates\main\main.html:153
 msgid "More"
 msgstr "Dowam"
 
-#: .\main\templates\main\main.html:165
+#: .\main\templates\main\main.html:164
 msgid "Our Services"
 msgstr "Hyzmatlarymyz"
 
-#: .\main\templates\main\main.html:194 .\main\templates\main\news_list.html:36
+#: .\main\templates\main\main.html:193 .\main\templates\main\news_list.html:36
 msgid "Read more..."
 msgstr "Dowamyny oka..."
 
-#: .\main\templates\main\main.html:200
+#: .\main\templates\main\main.html:199
 msgid "All news"
 msgstr "Täzelikler"
 
-#: .\main\templates\main\main.html:207
+#: .\main\templates\main\main.html:206
 msgid "Moments"
 msgstr "Biziň"
 
-#: .\main\templates\main\main.html:207
+#: .\main\templates\main\main.html:206
 msgid "from our"
 msgstr "Ajaýyp"
 
-#: .\main\templates\main\main.html:207
+#: .\main\templates\main\main.html:206
 msgid "events"
 msgstr "pursatlarymyz"
 
-#: .\main\templates\main\main.html:230
+#: .\main\templates\main\main.html:229
 msgid "Our Partners"
 msgstr "Hyzmatdaşlarymyz"
 
@@ -423,6 +422,11 @@ msgstr "Rus dili"
 #: .\tmt\settings.py:21
 msgid "Turkmen"
 msgstr "Turkmen dili"
+
+#, fuzzy
+#~| msgid "events"
+#~ msgid "New Event"
+#~ msgstr "pursatlarymyz"
 
 #~ msgid "TMT Consulting Group News"
 #~ msgstr "TMT Consulting Group Täzelikler"

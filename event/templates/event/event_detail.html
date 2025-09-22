@@ -12,8 +12,13 @@
 
 {% block extracss %}<link rel="stylesheet" href="{% static 'event/css/event.css' %}" />{% endblock %}
 
+{% block extralogo %}<a href="https://cci.gov.tm/" class='logo logo__extra'><img src="{% static 'main/img/tpp.png' %}" alt="logo"></a> {% endblock extralogo %}
+
+
 
 {% block content %}
+
+
 
 <section class="promo" style="background-image: url('{{ event.image.url }}');">
 	<div class="container">
@@ -56,10 +61,24 @@
 	</div>
 </section>
 
+{% comment %} <section class="support">
+	<div class="container">
+		<div class="direction__title title">{% trans "Official support" %}</div>
+		<div class="support__content">
+			<a data-fancybox="gallery " class="support__item" href="{% static 'event/img/Invitation (en)_2.png' %}">
+				<img src="{% static 'event/img/Invitation (en)_2.png' %}" alt="Превью" width="200">
+			</a>
+			<a data-fancybox="gallery " class="support__item" href="{% static 'event/img/Invitation (tk)_1.png' %}">
+				<img src="{% static 'event/img/Invitation (tk)_1.png' %}" alt="Превью" width="200">
+			</a>
+		</div>
+	</div>
+</section> {% endcomment %}
+
 {% if b2b or b2g %}
 <section class="pack">
 	<div class="container">
-		<div class="pack__title title">{% trans "We Assist in Organizing" %}</div>
+		<div class="pack__title title">{% trans "We Assist in Organizing:" %}</div>
 		<div class="pack__content">
 			<div class="pack__item">
 				<div class="pack__wrapper">
@@ -93,12 +112,12 @@
 	<div class="container">
 		<div class="contact__title title"> {% trans "Contacts" %} </div>
 		<div class="contact__content">
-			<div class="contact__name">{% trans "For those interested, please reach out by email:" %} </div>
+			<div class="contact__name">{% trans "For more information, contact us by e-mail:" %} </div>
 			<div class="contact__info">
 				<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
 					<path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
 				</svg>
-				<a href="mailto:edt2025@tmt.tm" class="contact__num">edt2025@tmt.tm</a>
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ted2025@tmt.tm&su=Обращение&body=Здравствуйте!" target="_blank" class="contact__num">ted2025@tmt.tm</a>
 			</div>
 			
 		</div>
