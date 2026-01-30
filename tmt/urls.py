@@ -10,7 +10,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from main.views import main, subscribe, news_list, news_detail
 from blog.views import blog, blog_detail
 from contacts.views import contact
-from event.views import eventDetail
+from event.views import eventDetail, program, catalog
 
 from .sitemaps import (
     StaticViewI18nSitemap,
@@ -51,6 +51,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    
     path('', main, name='home'),
     path('subscribe/', subscribe, name='subscribe'),
     path('news/', news_list, name='news_list'),
@@ -60,7 +61,9 @@ urlpatterns += i18n_patterns(
     path('about/', include('about.urls')),
     path('contact/', contact, name='contact'),
     path('opportunities/', include('opportunity.urls')),
-    path('event/<slug:slug>', eventDetail, name='event_detail')
+    path('event/<slug:slug>/', eventDetail, name='event_detail'),
+    path('programme/', program, name='program'),
+    path('catalog/', catalog, name='catalog'),
 )
 
 # Обработка медиафайлов в режиме DEBUG

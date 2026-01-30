@@ -68,7 +68,7 @@
 	font-size: 1rem;
 	font-weight: 600;
 	padding: 0 1rem;
-	animation: pulse 1.5s infinite;
+	/* animation: pulse 1.5s infinite; */
 	margin-top: 3rem;
 }
 
@@ -274,7 +274,8 @@
 
 .contact__info{
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
+	flex-direction: column;
 	gap: 10px;
 }
 
@@ -308,6 +309,25 @@
 
 .support__item img{
 	width: 100%;
+}
+
+.program__btn:hover {
+	background-color: #feba88;
+}
+
+.program__btn{
+	width: 240px;
+	height: 60px;
+	background-color: #97c680;
+	transition: all .3s;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: 'Open sans';
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0 1rem;
+	margin-top: 3rem;
 }
 
 

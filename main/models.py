@@ -63,7 +63,7 @@ class News(TranslatableModel):
      
     image = models.ImageField(upload_to='news_images/', verbose_name='Фото', blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(unique=True, max_length=500, verbose_name='Slug', blank=True)
+    slug = models.SlugField(unique=True, max_length=500, verbose_name='Slug', blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -195,6 +195,24 @@ class Partners(models.Model):
     class Meta:
         verbose_name = 'Партнёр'
         verbose_name_plural = 'Партнёры'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.url
+
+
+class MediaPartners(models.Model):
+    title = models.CharField(verbose_name='Название', blank=True, max_length=350)
+    image = models.ImageField( upload_to='partners/', verbose_name='Изображение', blank=True )
+    url = models.URLField(verbose_name='Ссылка', max_length=200, blank=True)
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name="Дата создания"
+    )
+
+    class Meta:
+        verbose_name = 'Медиа Партнёр'
+        verbose_name_plural = 'Медиа Партнёры'
         ordering = ['-created_at']
 
     def __str__(self):

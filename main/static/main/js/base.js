@@ -52,14 +52,14 @@ document.querySelector('.sub__form').addEventListener('submit', async (e) => {
 
 
 
-const header = document.querySelector('.header');
-const placeholder = document.querySelector('.header__placeholder');
-let isFixed = false;
+// const header = document.querySelector('.header');
+// const placeholder = document.querySelector('.header__placeholder');
+// let isFixed = false;
 
-function setPlaceholderHeight() {
-    const headerHeight = header.offsetHeight;
-    placeholder.style.height = isFixed ? `${headerHeight}px` : '0';
-}
+// function setPlaceholderHeight() {
+//     const headerHeight = header.offsetHeight;
+//     placeholder.style.height = isFixed ? `${headerHeight}px` : '0';
+// }
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;

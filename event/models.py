@@ -164,3 +164,24 @@ class EventPackb2g(TranslatableModel):
 	class Meta:
 		verbose_name = 'b2g'
 		verbose_name = 'b2g'
+
+		
+
+class Programme(TranslatableModel):
+	translate = TranslatedFields(
+		file = models.FileField( upload_to='programme/')
+	)
+
+	class Meta:
+		verbose_name = 'Programme'
+		verbose_name = 'Programme'
+
+
+class Catalog(TranslatableModel):
+	translate = TranslatedFields(
+		file = models.FileField( upload_to='catalog/')
+	)
+
+	class Meta:
+		verbose_name = 'Catalog'
+		verbose_name = 'Catalog'

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-22 17:21+0500\n"
-"PO-Revision-Date: 2025-09-22 17:23+0500\n"
+"POT-Creation-Date: 2025-11-11 16:04+0500\n"
+"PO-Revision-Date: 2025-11-07 15:14+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -28,9 +28,10 @@ msgstr "О нас"
 #: .\about\templates\about\about.html:8 .\about\templates\about\gallery.html:7
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog_detail.html:5
 #: .\contacts\templates\contacts\contacts.html:6
+#: .\event\templates\event\catalog.html:7
 #: .\event\templates\event\event_detail.html:7
-#: .\main\templates\main\base.html:10 .\main\templates\main\main.html:5
-#: .\main\templates\main\news_detail.html:6
+#: .\event\templates\event\program.html:7 .\main\templates\main\base.html:10
+#: .\main\templates\main\main.html:5 .\main\templates\main\news_detail.html:6
 msgid "TMT Consulting Group"
 msgstr "TMT Consulting Group"
 
@@ -52,10 +53,9 @@ msgstr "Проекты"
 msgid "Services"
 msgstr "Услуги"
 
-#: .\about\templates\about\about.html:40 .\about\templates\about\gallery.html:7
-#: .\about\templates\about\gallery.html:23 .\main\templates\main\main.html:130
-msgid "Gallery"
-msgstr "Галерея"
+#: .\about\templates\about\about.html:40 .\main\templates\main\main.html:153
+msgid "More"
+msgstr "Подробнее"
 
 #: .\about\templates\about\about.html:44
 msgid "Download report"
@@ -64,6 +64,11 @@ msgstr "Скачать отчёт"
 #: .\about\templates\about\about.html:70
 msgid "Contact us"
 msgstr "Связаться"
+
+#: .\about\templates\about\gallery.html:7
+#: .\about\templates\about\gallery.html:56 .\main\templates\main\main.html:130
+msgid "Gallery"
+msgstr "Галерея"
 
 #: .\blog\templates\blog\blog.html:5 .\blog\templates\blog\blog.html:23
 #: .\main\templates\main\base.html:41 .\main\templates\main\base.html:101
@@ -76,7 +81,7 @@ msgstr "Блог о конференциях и форумах"
 
 #: .\contacts\templates\contacts\contacts.html:6
 #: .\contacts\templates\contacts\contacts.html:23
-#: .\event\templates\event\event_detail.html:114
+#: .\event\templates\event\event_detail.html:109
 #: .\main\templates\main\base.html:46 .\main\templates\main\base.html:102
 msgid "Contacts"
 msgstr "Контакты"
@@ -113,34 +118,46 @@ msgstr "Отправить"
 msgid "Thank You for your message!"
 msgstr "Спасибо что связались с нами"
 
-#: .\event\templates\event\event_detail.html:30
-msgid "Join the Meetings"
-msgstr "Участвовать во встречах"
+#: .\event\templates\event\event_detail.html:31
+msgid "Information Technologies"
+msgstr "Информационные технологии"
 
-#: .\event\templates\event\event_detail.html:39
-msgid "About forum"
-msgstr "О форуме"
+#: .\event\templates\event\event_detail.html:32
+msgid "Food Security"
+msgstr "Продовольственная безопасность"
 
-#: .\event\templates\event\event_detail.html:51
-msgid "Key Areas"
-msgstr "Основные направления"
+#: .\event\templates\event\event_detail.html:43
+msgid "About Event"
+msgstr "О мероприятии"
 
-#: .\event\templates\event\event_detail.html:66
-msgid "Official support"
-msgstr "Официальная поддержка"
-
-#: .\event\templates\event\event_detail.html:82
+#: .\event\templates\event\event_detail.html:77
 msgid "We Assist in Organizing:"
 msgstr "Мы помогаем организовать:"
 
-#: .\event\templates\event\event_detail.html:93
-#: .\event\templates\event\event_detail.html:104
+#: .\event\templates\event\event_detail.html:88
+#: .\event\templates\event\event_detail.html:99
 msgid "Submit Application"
 msgstr "Подать заявку"
 
-#: .\event\templates\event\event_detail.html:116
-msgid "For more information, contact us by e-mail:"
-msgstr "Для подробной информации свяжитесь с нами по e-mail:"
+#: .\event\templates\event\event_detail.html:111
+msgid "For more information, contact us:"
+msgstr "Для подробной информации свяжитесь с нами:"
+
+#: .\event\templates\event\program.html:22
+msgid "Programme"
+msgstr "Программа"
+
+#: .\event\templates\event\program.html:24 .\tmt\settings.py:19
+msgid "English"
+msgstr "Английский"
+
+#: .\event\templates\event\program.html:25 .\tmt\settings.py:20
+msgid "Russian"
+msgstr "Русский"
+
+#: .\event\templates\event\program.html:26 .\tmt\settings.py:21
+msgid "Turkmen"
+msgstr "Туркменский"
 
 #: .\main\templates\main\base.html:40 .\main\templates\main\base.html:99
 msgid "Home"
@@ -215,10 +232,6 @@ msgstr "Виртуальные офисы"
 msgid "We ensure accessibility, convenience, and full business productivity"
 msgstr "Обеспечим доступность, удобство и полную продуктивность бизнеса. "
 
-#: .\main\templates\main\main.html:153
-msgid "More"
-msgstr "Подробнее"
-
 #: .\main\templates\main\main.html:164
 msgid "Our Services"
 msgstr "Наши Услуги"
@@ -246,6 +259,10 @@ msgstr "Мероприятий"
 #: .\main\templates\main\main.html:229
 msgid "Our Partners"
 msgstr "Наши партнёры"
+
+#: .\main\templates\main\main.html:245
+msgid "Our Media Partners"
+msgstr "Наши Медиа партнёры"
 
 #: .\main\templates\main\news_detail.html:22
 msgid "Back to News"
@@ -407,17 +424,20 @@ msgstr ""
 "Начните поиск работы в Туркменистане уже сегодня — отправьте свое резюме и "
 "сделайте первый шаг к новой карьере!"
 
-#: .\tmt\settings.py:19
-msgid "English"
-msgstr "Английский"
+#~ msgid "Join the Meetings"
+#~ msgstr "Участвовать во встречах"
 
-#: .\tmt\settings.py:20
-msgid "Russian"
-msgstr "Русский"
+#~ msgid "About forum"
+#~ msgstr "О форуме"
 
-#: .\tmt\settings.py:21
-msgid "Turkmen"
-msgstr "Туркменский"
+#~ msgid "Catalog"
+#~ msgstr "Каталог"
+
+#~ msgid "Key Areas"
+#~ msgstr "Основные направления"
+
+#~ msgid "Official support"
+#~ msgstr "Официальная поддержка"
 
 #~ msgid "New Event"
 #~ msgstr "Новое мероприятие"

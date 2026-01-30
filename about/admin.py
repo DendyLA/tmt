@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from parler.admin import TranslatableAdmin
 
-from .models import Project, ProjectImage, AboutServices
+from .models import Project, ProjectImage, AboutServices, Statistic
 
 
 
@@ -21,7 +21,7 @@ class ProjectAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ( 'title' ,'image', 'descr', 'pdf')
+            'fields': ( 'title' ,'image', 'video', 'descr', 'descr_full', 'pdf')
         }),
         ('Дополнительно', {
             'fields': ('created_at',),  # Запятая важна для кортежа!
@@ -39,6 +39,14 @@ class ProjectAdmin(TranslatableAdmin):
         return "-"
     
 admin.site.register(Project, ProjectAdmin)
+
+
+@admin.register(Statistic)
+class StatisticAdmin(TranslatableAdmin):
+    list_display = ('title', 'num')
+    list_display_links = ('title', 'num')
+    readonly_fields = ('created_at',)
+    ordering = ('-created_at',)
 
 
 

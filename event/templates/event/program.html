@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{{ event.title }} | {% trans "TMT Consulting Group" %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="">
+{% endblock %}
+
+
+{% block extracss %}<link rel="stylesheet" href="{% static 'event/css/program.css' %}" />{% endblock %}
+
+{% block extralogo %}<a href="https://cci.gov.tm/" class='logo logo__extra'><img src="{% static 'main/img/tpp.png' %}" alt="logo"></a> {% endblock extralogo %}
+
+
+
+{% block content %}
+<section class="programme">
+	<div class="container">
+		<h1 class="title">{% trans "Programme" %}</h1>
+		<div class="programme__wrapper">
+			<a href="{{ programme_en.file.url }}" download><div class="programme__button">{% trans "English" %}</div></a>
+			<a href="{{ programme_ru.file.url }}" download><div class="programme__button">{% trans "Russian" %}</div></a>
+			<a href="{{ programme_tk.file.url }}" download><div class="programme__button">{% trans "Turkmen" %}</div></a>
+		</div>
+		
+	</div>
+</section>
+
+
+{% endblock %}
+
+
+{% block extrajs %}
+<script src="{% static 'event/js/event.js' %}"></script>
+{% endblock %}

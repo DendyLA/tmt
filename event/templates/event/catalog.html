@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{{ event.title }} | {% trans "TMT Consulting Group" %}{% endblock %}
+{% block meta %}
+    <meta name="description" content="">
+{% endblock %}
+
+
+{% block extracss %}<link rel="stylesheet" href="{% static 'event/css/program.css' %}" />{% endblock %}
+
+{% block extralogo %}<a href="https://cci.gov.tm/" class='logo logo__extra'><img src="{% static 'main/img/tpp.png' %}" alt="logo"></a> {% endblock extralogo %}
+
+
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+{% block extrajs %}
+<script src="{% static 'event/js/event.js' %}"></script>
+{% endblock %}

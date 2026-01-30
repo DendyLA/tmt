@@ -18,15 +18,48 @@
 {% endblock extracss %}
 
 {% block content %}
+<section class="promo" style="background-image: url('{{ project.image.url }}');">
+	<div class="container">
+		<div class="title promo__title">{{ project.title }}</div>
+	</div>
+</section>
+<section class="about">
+	<div class="container">
+		<div class="about__content">
+			{% if project.video %}
+				<div class="about__video">
+					<video controls>
+						<source src="{{ project.video.url }}" type="video/mp4">
+						Ваш браузер не поддерживает видео.
+					</video>
+				</div>
+			{% endif %}
+			<div class="about__descr">{{ project.descr_full|safe }}</div>
+		</div>
+	</div>
+</section>
+<section class="statistic">
+	<div class="container">
+		<div class="statistic__wrapper">
+			{% for s in statistic %}
+			<div class="statistic__item">
+				<div class="statistic__num">{{ s.num }}</div>
+				<div class="statistic__title">{{ s.title }}</div>	
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</section>
 <section class="gallery">
 	<div class="container">
 		<h1 class="title">{% trans 'Gallery' %}</h1>
 		<div class="gallery__wrapper">
-				{% for item in image %}
-				<div class="gallery__item">
-					<img src="{{ item.image.url }}" alt="{{ item.caption }}">
-				</div>
-				{% endfor %}
+			{% for item in image %}
+			<div class="gallery__item">
+				<img src="{{ item.image.url }}" alt="{{ item.caption }}">
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

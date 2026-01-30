@@ -37,7 +37,7 @@
 						<div class="projects__descr">{{ item.descr|safe }}</div>
 						<div class="projects__links">
 							<a class="projects__gallery" href='{% url "gallery" item.pk%}'>
-								<button>{% trans 'Gallery' %}</button>
+								<button>{% trans 'More' %}</button>
 							</a>
 							{% if item.pdf and item.pdf.name %}
 								<a href="{{ item.pdf.url }}" download class="projects__file">

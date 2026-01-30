@@ -237,6 +237,22 @@
 		</div>
 	</div>
 </section>
+
+
+<section class="partners">
+	<div class="container">
+		<h3 class="partners__headTitle title" data-aos='fade-right' data-aos-duration="1000" data-aos-anchor-placement="center-bottom">{% trans 'Our Media Partners' %}</h3>
+		<div class="partners__wrapper" data-aos='fade-up' data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+			{% for item in mediaPartners %}
+			<a class="partners__item" href="{{ item.url }}">
+				<div class="partners__image">
+					<img src="{{ item.image.url }}" alt="partner">
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
 {% endblock %}
 
 

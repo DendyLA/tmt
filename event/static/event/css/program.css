@@ -1,0 +1,26 @@
+.programme__wrapper{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.programme__button{
+	width: 9rem;	
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #97c680;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-weight: 600;
+	transition: all .3s;
+	cursor: pointer;
+	border-radius: .5rem;
+}
+
+.programme__button:hover {
+	background-color: #feba88;
+}

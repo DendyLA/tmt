@@ -78,10 +78,22 @@ class EventDirectionAdmin(TranslatableAdmin):
 class EventPackb2bAdmin(TranslatableAdmin):
     list_display = ('name',)
     list_display_links = ('name',)
-
-
-
+    
 @admin.register(models.EventPackb2g)
 class EventPackb2gAdmin(TranslatableAdmin):
     list_display = ('name',)
     list_display_links = ('name',)
+
+
+
+
+@admin.register(models.Programme)
+class ProgrammeAdmin(TranslatableAdmin):
+    list_display = ('file',)
+    list_display_links = ('file',)
+
+
+@admin.register(models.Catalog)
+class CatalogAdmin(TranslatableAdmin):
+    list_display = ('file',)
+    list_display_links = ('file',)

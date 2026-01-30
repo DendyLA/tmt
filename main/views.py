@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 
 from .forms import SubscribeForm
 
-from .models import Slider, Slogan, Services, News, Feedbacks, Partners, Video, Info
+from .models import Slider, Slogan, Services, News, Feedbacks, Partners, Video, Info, MediaPartners
 
 from event.models import Event
 
@@ -18,10 +18,11 @@ def main(request):
     latest_news = News.objects.order_by('-pub_date')[:3]
     feedbacks = Feedbacks.objects.all()
     partners = Partners.objects.order_by('created_at')
+    mediaPartners = MediaPartners.objects.order_by('created_at')
     video = Video.objects.last()
     infoVideo = Info.objects.last()
     event = Event.objects.last()
-    return render(request, 'main/main.html', {'slides' : slides, 'slogans': slogans, 'services' : services, 'latest_news': latest_news, 'feedbacks' : feedbacks, 'partners' : partners, 'video': video, 'infoVideo' : infoVideo, 'event' : event,})
+    return render(request, 'main/main.html', {'slides' : slides, 'slogans': slogans, 'services' : services, 'latest_news': latest_news, 'feedbacks' : feedbacks, 'partners' : partners, 'video': video, 'infoVideo' : infoVideo, 'event' : event, 'mediaPartners' : mediaPartners})
 
 
 @require_POST  # Разрешаем только POST-запросы
